@@ -1,0 +1,12 @@
+/* App.css is mostly clear because we use index.css for global styles 
+   and component-specific CSS files for scoped styles */
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}

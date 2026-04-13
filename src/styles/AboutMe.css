@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Allison&display=swap');
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  padding-top: 150px;
+  position: relative;
+}
+
+/* Left side (Heading & Image) */
+.about-left {
+  flex: 0.8;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 700px;
+}
+
+.about-heading {
+  z-index: 10;
+  position: absolute;
+  top: 20px;
+  right: 50px;
+}
+
+.about-subtitle {
+  font-family: 'Impact', sans-serif;
+  font-size: 5rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  text-transform: uppercase;
+  display: block;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.about-title {
+  font-family: 'Allison', cursive;
+  font-size: 10rem;
+  font-weight: 570;
+  color: var(--color-highlight-2);
+  /* Pink */
+  margin-top: -60px;
+  margin-left: 150px;
+  line-height: 1;
+  text-shadow: 2px 2px 0px var(--color-bg-main);
+  white-space: nowrap;
+}
+
+.about-image-wrapper {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 5;
+  width: 100%;
+  max-width: 800px;
+}
+
+.about-image {
+  width: 80%;
+  height: auto;
+  border-radius: 20px;
+  filter: drop-shadow(-15px 15px 0px rgba(22, 61, 96, 0.1));
+}
+
+.neon-pulse-glow {
+  animation: neonPulseGlow 3s infinite alternate ease-in-out;
+}
+
+@keyframes neonPulseGlow {
+  0% {
+    filter: drop-shadow(-12px 12px 10px rgba(217, 113, 151, 0.3)) drop-shadow(0 0 15px rgba(255, 192, 217, 0.2));
+  }
+  100% {
+    filter: drop-shadow(-15px 15px 25px rgba(217, 113, 151, 0.8)) drop-shadow(0 0 50px rgba(255, 192, 217, 0.7));
+  }
+}
+
+/* Right side (Text info) */
+.about-right {
+  flex: 1.2;
+  padding-top: 20px;
+  max-width: 700px;
+  z-index: 6;
+}
+
+.about-block {
+  margin-bottom: 2.5rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.block-title {
+  font-family: 'PP Neue Bit', sans-serif;
+  font-size: 2.5rem;
+  color: #143d60;
+  -webkit-text-stroke: 1.5px #143d60;
+  text-shadow: 3px 3px 0px rgba(20, 61, 96, 0.2);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.block-desc {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--color-text-main);
+  font-weight: 400;
+  text-align: justify;
+}
+
+.edu-list {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.edu-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+
+.edu-icon {
+  color: #00d26a;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.edu-info strong {
+  font-weight: 700;
+  display: block;
+  font-size: 1.1rem;
+  color: var(--color-text-main);
+  margin-bottom: 0.2rem;
+}
+
+.edu-meta {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: var(--color-highlight-2);
+}
+
+.edu-meta span {
+  color: var(--color-text-main);
+  opacity: 0.5;
+  margin: 0 0.3rem;
+}
+
+/* Photo Collage */
+.photo-collage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.polaroid {
+  width: 140px;
+  height: 160px;
+  object-fit: cover;
+  border: 8px solid white;
+  border-bottom: 30px solid white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  position: absolute;
+  cursor: pointer;
+}
+
+/* Removed specific .p1 .p2 .p3 transformations since framer-motion handles them directly */
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-left {
+    min-height: 600px;
+    width: 100%;
+  }
+
+  .about-heading {
+    text-align: center;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .about-title {
+    margin-left: 0;
+  }
+
+  .about-image-wrapper {
+    position: relative;
+    top: 0;
+    left: auto;
+    margin: 40px auto 0;
+  }
+
+  .about-right {
+    padding-top: 0;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-collage {
+    margin-top: 50px;
+  }
+
+  .polaroid {
+    width: 100px;
+    height: 120px;
+    border-bottom: 20px solid white;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-subtitle {
+    font-size: 2.5rem;
+  }
+
+  .about-title {
+    font-size: 4.5rem;
+  }
+}

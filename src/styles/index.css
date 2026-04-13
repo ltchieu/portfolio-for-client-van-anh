@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+  font-family: 'PP Neue Bit';
+  src: url('../assets/font/Mondwest-&-NeueBit-Font/ppneuebit-bold.otf') format('opentype');
+  font-weight: 1000;
+  font-style: normal;
+}
+
+:root {
+  --color-bg-main: #fbfae0;
+  --color-bg-secondary: #fbecb2;
+  --color-text-main: #143d60;
+  --color-highlight-1: #ffc0d9;
+  --color-highlight-2: #d97197;
+
+  --font-main: 'Montserrat', sans-serif;
+  --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-bg-main);
+  color: var(--color-text-main);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+section {
+  padding: 6rem 2rem;
+  max-width: 1500px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.section-title {
+  font-family: 'PP Neue Bit', sans-serif;
+  font-size: 3.5rem;
+  color: #143d60;
+  -webkit-text-stroke: 1.5px #143d60;
+  text-shadow: 3px 3px 0px rgba(20, 61, 96, 0.2);
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 50%;
+  height: 6px;
+  background-color: var(--color-highlight-2);
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 4rem 1.5rem;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+}
