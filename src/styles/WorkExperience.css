@@ -11,6 +11,11 @@
     'apps apps';
 }
 
+.we-board--brain {
+  margin-top: 0;
+  border-top: 2px solid color-mix(in srgb, var(--color-text-main) 25%, transparent);
+}
+
 .we-panel {
   padding: 1.6rem 1.6rem;
   background-color: var(--color-bg-main);

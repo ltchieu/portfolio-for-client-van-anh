@@ -105,9 +105,7 @@ const HighlandExperience = () => {
     <>
       {/* (1) Project Panel */}
       <div className="we-panel we-intro hl-panel-premium reveal-on-scroll">
-        <div className="we-panel-label">(1) Project</div>
-        <img className="hl-header-img" src={imgs.header} alt="Highlands TikTok Header" />
-        <h3 className="we-title" style={{ marginTop: '1.5rem' }}>HIGHLANDS TIKTOK</h3>
+        <h3 className="we-title" style={{ marginTop: '0.5rem' }}>HIGHLANDS TIKTOK</h3>
         <p className="we-subtitle">Social media marketing | 08/2024 – 04/2025</p>
         <div className="we-body">
           <p>
@@ -115,11 +113,13 @@ const HighlandExperience = () => {
             focusing on consistent content production and community engagement.
           </p>
         </div>
+        <img className="hl-header-img" src={imgs.header} alt="Highlands TikTok Header" />
+
       </div>
 
       {/* (2) Follower Growth Section */}
       <div className="we-panel we-hero reveal-on-scroll" style={{ position: 'relative' }}>
-        <div className="we-panel-label">(2) Follower Growth</div>
+        <div className="we-panel-label">(1) Follower Growth</div>
         <div className="hl-growth-narrative">
           <div className="hl-comparison-v2">
             <div className="hl-phone-block">
@@ -157,7 +157,7 @@ const HighlandExperience = () => {
 
       {/* (3) Performance Metrics */}
       <div className="we-panel we-metrics reveal-on-scroll">
-        <div className="we-panel-label">(3) Performance Metrics</div>
+        <div className="we-panel-label">(2) Performance Metrics</div>
         <p className="hl-timeline-text">
           From <strong>01/09/2024</strong> to <strong>12/01/2025</strong>, the data speaks for itself:
         </p>
@@ -238,9 +238,9 @@ const HighlandExperience = () => {
         </div>
       </div>
 
-      {/* (5) Brand Identity */}
+      {/* (3) Brand Identity */}
       <div className="we-panel we-patterns reveal-on-scroll">
-        <div className="we-panel-label">(5) Brand Identity</div>
+        <div className="we-panel-label">(3) Brand Identity</div>
         <img src={imgs.brandLogo} alt="Highlands Logo Identity" className="hl-brand-logo-img" />
         <div className="hl-palette small">
           <div className="hl-color red"></div>
