@@ -4,7 +4,14 @@ import '../styles/Welcome.css';
 const Welcome = () => {
   return (
     <section id="welcome" className="welcome-container">
-      <motion.div 
+      <div className="welcome-bg-stickers" aria-hidden="true">
+        <span className="sticker sticker-star s1">✦</span>
+        <span className="sticker sticker-ring s2" />
+        <span className="sticker sticker-dot s3" />
+        <span className="sticker sticker-star s4">✱</span>
+        <span className="sticker sticker-pill s5" />
+      </div>
+      <motion.div
         className="welcome-content"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}

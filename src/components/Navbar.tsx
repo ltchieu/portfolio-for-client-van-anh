@@ -5,24 +5,32 @@ import '../styles/Navbar.css';
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('about');
+  const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
       
+      if (window.scrollY < window.innerHeight * 0.4) {
+        setActiveSection('');
+        return;
+      }
+
       const sections = ['about', 'experience', 'activities', 'skills', 'contact'];
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
           const rect = element.getBoundingClientRect();
-          if (rect.top <= 150 && rect.bottom >= 150) {
+          if (rect.top <= 250 && rect.bottom >= 250) {
             setActiveSection(section);
             break;
           }
         }
       }
     };
+
+    // Run once on mount to set initial state correctly upon reload
+    handleScroll();
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
