@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import '../styles/ToanPhatExperience.css';
 
 const ToanPhatExperience = () => {

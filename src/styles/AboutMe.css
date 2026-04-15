@@ -23,7 +23,6 @@
   z-index: 10;
   position: absolute;
   top: 20px;
-  right: 50px;
 }
 
 .about-subtitle {
@@ -43,8 +42,8 @@
   font-weight: 570;
   color: var(--color-highlight-2);
   /* Pink */
-  margin-top: -4vw;
-  margin-left: 15vw;
+  margin-top: -3vw;
+  margin-left: 13vw;
   line-height: 1;
   text-shadow: 2px 2px 0px var(--color-bg-main);
   white-space: nowrap;
