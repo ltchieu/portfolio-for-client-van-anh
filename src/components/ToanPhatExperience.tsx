@@ -6,23 +6,7 @@ const ToanPhatExperience = () => {
   const img2 = new URL('../assets/images/WorkExperience/toanphat (2).png', import.meta.url).href;
   const img3 = new URL('../assets/images/WorkExperience/toanphat (3).png', import.meta.url).href;
 
-  // Scroll reveal
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-revealed');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
 
-    document.querySelectorAll('.tp-reveal').forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
 
   const responsibilities = [
     {

@@ -410,20 +410,49 @@
   }
 
   .hmk-info {
+    padding: 1.5rem 1.2rem;
     border-right: none;
     border-bottom: 1px solid color-mix(in srgb, var(--color-text-main) 10%, transparent);
   }
 
-  .hmk-grid {
-    max-height: 420px;
+  .hmk-title {
+    font-size: 2.22rem;
   }
 
-  .hmk-title {
-    font-size: 2rem;
+  .hmk-grid {
+    grid-template-rows: repeat(2, 120px);
+    max-height: none;
   }
 
   .hmk-marquee-card {
     width: 200px;
     height: 120px;
+  }
+
+  .hmk-right-col {
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 480px) {
+  .hmk-title {
+    font-size: 1.8rem;
+  }
+
+  .hmk-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+  }
+
+  .hmk-grid-item {
+    aspect-ratio: 16 / 9;
+  }
+
+  .hmk-marquee-card {
+    width: 160px;
+    height: 100px;
   }
 }

@@ -2,13 +2,20 @@
   margin-top: 2rem;
   background-color: var(--color-bg-main);
   display: grid;
-  grid-template-columns: 0.7fr 1.08fr;
+  grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.08fr);
   grid-template-areas:
     'intro hero'
     'patterns metrics'
     'typography typography'
     'formats formats'
     'apps apps';
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.we-board--spaced {
+  margin-top: 15vh;
 }
 
 .we-board--brain {
@@ -21,6 +28,8 @@
   background-color: var(--color-bg-main);
   border-bottom: 1px solid var(--color-text-main);
   border-bottom-color: color-mix(in srgb, var(--color-text-main) 35%, transparent);
+  min-width: 0;
+  width: 100%;
 }
 
 .we-intro {
@@ -352,6 +361,8 @@
   gap: 1rem;
 }
 
+
+
 .we-format-card {
   background-color: var(--color-bg-main);
   border: 1px solid var(--color-text-main);
@@ -411,7 +422,7 @@
 
 @media (max-width: 768px) {
   .we-board {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     grid-template-areas:
       'intro'
       'hero'
@@ -420,6 +431,12 @@
       'typography'
       'formats'
       'apps';
+    margin-top: 5rem;
+    width: 100%;
+  }
+
+  .we-panel {
+    padding: 1.2rem 1rem;
   }
 
   .we-intro,
@@ -429,6 +446,19 @@
 
   .we-kpis {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+
+  .we-kpi {
+    padding: 0.7rem;
+  }
+
+  .we-kpi-value {
+    font-size: 1.5rem;
+  }
+
+  .we-title {
+    font-size: 2.2rem;
   }
 
   .we-pillars {
@@ -440,27 +470,54 @@
   }
 
   .we-hero-stage {
-    min-height: 320px;
+    min-height: 280px;
+    height: auto;
+    overflow: hidden;
   }
 
   .we-arm-img {
-    right: -38%;
-    top: -18%;
-    width: 190%;
+    right: -45%;
+    top: -10%;
+    width: 200%;
     opacity: 1;
   }
 
   .we-phone {
-    right: 29%;
-    top: 16%;
-    width: min(240px, 62%);
+    right: 25%;
+    top: 15%;
+    width: min(220px, 60%);
   }
 
   .we-float {
-    width: 48%;
+    width: 45%;
+    border-radius: 12px;
   }
 
   .we-shot-img {
-    height: 240px;
+    height: 200px;
+  }
+
+  .we-metric-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .we-kpis {
+    grid-template-columns: 1fr;
+  }
+
+  .we-hero-stage {
+    min-height: 240px;
+  }
+
+  .we-phone {
+    right: 15%;
+    width: 70%;
+  }
+
+  .we-title {
+    font-size: 1.8rem;
   }
 }

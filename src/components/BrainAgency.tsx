@@ -1,4 +1,3 @@
-/* BrainAgency.tsx */
 import { useEffect } from 'react';
 import '../styles/BrainAgency.css';
 
@@ -17,26 +16,7 @@ const BrainAgency = () => {
     modernKV: gallery[5],
   };
 
-  // Scroll reveal effect
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-revealed');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.12 }
-    );
 
-    document.querySelectorAll('.ba-reveal').forEach((el) => {
-      observer.observe(el);
-    });
-
-    return () => observer.disconnect();
-  }, []);
 
   // Branded client campaigns data
   const campaigns = [

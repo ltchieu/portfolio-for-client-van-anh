@@ -13,17 +13,13 @@ const WorkExperience = () => {
         <ToanPhatExperience />
       </div>
 
-      <div style={{ height: '300px' }}></div>
-
       {/* Highlands Coffee TikTok */}
-      <div className="we-board">
+      <div className="we-board we-board--spaced">
         <HighlandExperience />
       </div>
 
-      <div style={{ height: '300px' }}></div>
-
       {/* Brain Agency */}
-      <div className="we-board">
+      <div className="we-board we-board--spaced">
         <BrainAgency />
       </div>
     </section>

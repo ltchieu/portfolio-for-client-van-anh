@@ -5,3 +5,13 @@
   gap: 3rem;
   margin-top: 2rem;
 }
+
+.responsive-box {
+  height: 300px;
+}
+
+@media (max-width: 768px) {
+  .responsive-box {
+    height: 50px;
+  }
+}

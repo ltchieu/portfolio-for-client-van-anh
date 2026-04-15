@@ -12,8 +12,9 @@
   justify-content: center;
   align-items: center;
   min-height: calc(100vh - 5rem);
+  height: auto;
   overflow: hidden;
-  padding: 4rem 2rem !important;
+  padding: 8rem 2rem !important;
   box-sizing: border-box;
 }
 
@@ -112,16 +113,15 @@
 
 .welcome-cursive {
   font-family: 'Allison', cursive;
-  font-size: 8.5rem;
+  font-size: clamp(3rem, 12vw, 8.5rem);
   color: var(--color-highlight-1);
-  /* Pink cursive from Image 2 */
   font-weight: 400;
-  margin-bottom: -5.5rem;
-  /* Layer over the PORTFOLIO text */
-  margin-left: -5rem;
+  margin-bottom: -4vw;
+  margin-left: -5vw;
   z-index: 10;
   transform: rotate(-6deg);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
 }
 
 .welcome-portfolio {
@@ -130,12 +130,13 @@
   justify-content: center;
   font-family: 'Playfair Display', serif;
   font-weight: 900;
-  font-size: 11rem;
+  font-size: clamp(3rem, 14vw, 11rem);
   color: var(--color-bg-secondary);
   -webkit-text-stroke: 4px var(--color-bg-main);
   text-shadow: 8px 8px 0px var(--color-highlight-2);
   letter-spacing: -3px;
   z-index: 5;
+  width: 100%;
 }
 
 .char {
@@ -162,9 +163,9 @@
 
 .c-r {
   transform: translateY(-5px) rotate(-3deg);
-  font-size: 12.5rem;
+  font-size: 1.15em;
   z-index: 2;
-  margin-left: -10px;
+  margin-left: -1vw;
 }
 
 .c-t {
@@ -201,12 +202,12 @@
   font-family: 'Inter', sans-serif;
   color: var(--color-highlight-1);
   -webkit-text-stroke: 1px var(--color-bg-main);
-  font-size: 5rem;
-  margin: 0 -20px;
+  font-size: 0.5em;
+  margin: 0 -2vw;
   transform-origin: center;
   animation: infRotate 4s linear infinite;
   z-index: 3;
-  margin-top: 100px;
+  margin-top: 5vw;
 }
 
 .spin-star-small {
@@ -233,6 +234,7 @@
 }
 
 @keyframes floatSticker {
+
   0%,
   100% {
     transform: translateY(0) rotate(0deg) scale(1);
@@ -257,15 +259,7 @@
   z-index: 10;
 }
 
-@media (max-width: 1024px) {
-  .welcome-portfolio {
-    font-size: 7rem;
-  }
-
-  .welcome-cursive {
-    font-size: 6rem;
-  }
-}
+/* Remove redundant overrides as clamp is used */
 
 @media (max-width: 768px) {
   .sticker {
@@ -300,23 +294,15 @@
   }
 
   .welcome-portfolio {
-    font-size: 4.5rem;
-    -webkit-text-stroke: 2px var(--color-bg-main);
-    text-shadow: 4px 4px 0px var(--color-highlight-2);
+    -webkit-text-stroke: 1.5px var(--color-bg-main);
+    text-shadow: 3px 3px 0px var(--color-highlight-2);
   }
 
   .welcome-cursive {
-    font-size: 4rem;
     margin-bottom: -2rem;
   }
 
-  .c-r {
-    font-size: 5.5rem;
-  }
-
   .spin-star {
-    font-size: 2.5rem;
-    margin-top: 40px;
     margin: 0 -5px;
   }
 

@@ -140,7 +140,7 @@
 
 .tvc-achievement-top {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.3rem;
+  font-size: clamp(0.95rem, 5vw, 1.3rem);
   font-weight: 900;
   color: var(--tvc-gold);
   letter-spacing: 0.04em;
@@ -570,15 +570,61 @@
   }
 
   .tvc-info {
+    padding: 1.5rem 1.2rem;
     border-right: none;
     border-bottom: 1px solid color-mix(in srgb, var(--color-text-main) 10%, transparent);
+  }
+
+  .tvc-title {
+    font-size: 2.2rem;
+  }
+
+  .tvc-title em {
+    font-size: 1.8rem;
+  }
+
+  .tvc-achievement {
+    padding: 0.8rem 1rem;
+    gap: 0.7rem;
+  }
+
+  .tvc-achievement-stars {
+    display: none;
   }
 
   .tvc-grid {
     grid-template-rows: repeat(2, 120px);
   }
 
+  .tvc-right-col {
+    margin-top: 20px;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 480px) {
   .tvc-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .tvc-achievement {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .tvc-achievement-text {
+    align-items: center;
+  }
+
+  .tvc-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+  }
+  
+  .tvc-grid-item {
+     aspect-ratio: 16 / 9;
   }
 }

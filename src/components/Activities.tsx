@@ -1,7 +1,7 @@
-/* Activities.tsx – Container for activity/project sub-components */
 import '../styles/Activities.css';
 import HmkProject from './HmkProject';
 import TvcProject from './TvcProject';
+import ScientificResearch from './ScientificResearch';
 
 const Activities = () => {
   return (
@@ -12,10 +12,15 @@ const Activities = () => {
         {/* Project 1 – HMK #Nét Mọi Look */}
         <HmkProject />
 
-        <div style={{ height: '300px' }}></div>
+        <div className="responsive-box"></div>
 
         {/* Project 2 – TVCreate | Tinh Hoa Không Ngủ */}
         <TvcProject />
+
+        <div className="responsive-box"></div>
+
+        {/* Scientific Research */}
+        <ScientificResearch />
       </div>
     </section>
   );

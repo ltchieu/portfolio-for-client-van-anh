@@ -122,10 +122,9 @@
   overflow: hidden;
   background: color-mix(in srgb, var(--color-text-main) 3%, transparent);
   border: 1px solid color-mix(in srgb, var(--color-text-main) 5%, transparent);
-  width: 40%;
-  /* Shrink width as requested */
-  min-width: 280px;
-  /* Keeps readable on mobile */
+  flex: 1 1 280px;
+  max-width: 100%;
+  width: 100%;
 }
 
 .ba-kv-img {
@@ -163,8 +162,8 @@
 }
 
 .ba-photo-card {
-  flex: 1 1 0;
-  max-width: 200px;
+  flex: 1 1 140px;
+  max-width: 100%;
   border-radius: 14px;
   overflow: hidden;
   position: relative;
@@ -179,7 +178,8 @@
 
 .ba-photo-img {
   width: 100%;
-  height: 260px;
+  height: auto;
+  aspect-ratio: 9 / 12;
   object-fit: cover;
   display: block;
   transition: transform 0.4s ease;
@@ -339,26 +339,53 @@
 }
 
 /* ── Responsive ─────────────────────────────────────────── */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .ba-metrics-grid {
     grid-template-columns: 1fr;
   }
 
+  .ba-metric-number {
+    font-size: 2rem;
+  }
+
   .ba-kv-grid {
-    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .ba-kv-item {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .ba-photo-grid {
+    flex-wrap: wrap;
+  }
+
+  .ba-photo-card {
+    flex: 1 1 140px;
+    max-width: none;
+  }
+
+  .ba-photo-img {
+    height: 200px;
+  }
+
+  .ba-photo-brand {
+    font-size: 0.65rem;
+  }
+
+  .ba-marquee-tag {
+    font-size: 0.65rem;
+    padding: 3px 10px;
   }
 }
 
-@media (max-width: 768px) {
-  .ba-metric-number {
-    font-size: 1.8rem;
+@media (max-width: 480px) {
+  .ba-photo-card {
+    flex: 1 1 100%;
   }
 
-  .ba-gallery-item {
-    width: 160px;
-  }
-
-  .ba-gallery-img {
-    height: 220px;
+  .ba-photo-img {
+    height: 240px;
   }
 }

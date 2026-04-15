@@ -1,4 +1,3 @@
-/* TvcProject.tsx – TVCreate Competition | Tinh Hoa Không Ngủ */
 import { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import '../styles/TvcProject.css';
@@ -21,22 +20,7 @@ const TvcProject = () => {
   const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
   const closeLightbox = () => setLightboxSrc(null);
 
-  // Scroll reveal
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-revealed');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.08 }
-    );
-    document.querySelectorAll('.tvc-reveal').forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
+
 
   // Escape key closes lightbox
   useEffect(() => {
