@@ -210,6 +210,7 @@
   border-color: color-mix(in srgb, var(--color-text-main) 35%, transparent);
   background-color: var(--color-bg-secondary);
 }
+
 .we-hero-mini {
   border-radius: 16px;
   overflow: hidden;

@@ -176,9 +176,9 @@ const HighlandExperience = () => {
         <div className="we-panel-label">(4) Massive Viewership & Community</div>
         <div className="hl-viewership-intro">
           <p className="we-body">
-            Some of our videos reached massive viewership — especially one that hit <strong>1.2M views!</strong>
-            Scroll through our top-performing content below:
+            Some of our videos reached massive viewership — especially one that hit <span><strong>1.2M views!</strong></span>
           </p>
+          <p>Scroll through our top-performing content below:</p>
         </div>
 
         {/* Live TikTok Video Carousel */}

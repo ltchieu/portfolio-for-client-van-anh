@@ -1,5 +1,5 @@
 /* BrainAgency.tsx */
-import { useRef, useEffect } from 'react';
+import { useEffect } from 'react';
 import '../styles/BrainAgency.css';
 
 const BrainAgency = () => {

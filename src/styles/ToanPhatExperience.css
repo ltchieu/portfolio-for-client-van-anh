@@ -1,0 +1,487 @@
+/* ── Brand accent ──────────────────────────────────────── */
+:root {
+  --tp-gold: #c89b3c;
+  --tp-gold-light: #e8c96a;
+  --tp-brown: #3d2b1f;
+  --tp-cream: #f5f0e8;
+  --tp-navy: #1a3c5e;
+}
+
+/* ── Panel 1 – Intro ───────────────────────────────────── */
+.tp-panel-intro {
+  background-image: radial-gradient(circle at top right,
+      rgba(200, 155, 60, 0.08),
+      transparent 60%);
+}
+
+/* ── Client chips ──────────────────────────────────────── */
+.tp-client-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 1rem;
+}
+
+.tp-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: white;
+  background: var(--tp-chip-color, #333);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.tp-chip:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.15);
+}
+
+.tp-chip-flag {
+  font-size: 0.85rem;
+}
+
+/* Industry badge */
+.tp-industry-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  padding: 6px 14px;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--tp-gold) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--tp-gold) 30%, transparent);
+  color: var(--tp-gold);
+  font-size: 0.72rem;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* ── Panel 2 – Global Clients ─────────────────────────── */
+.tp-context-quote {
+  background: color-mix(in srgb, var(--color-text-main) 3%, transparent);
+  border-left: 3px solid var(--tp-gold);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--color-text-main);
+  padding: 0.8rem 1rem;
+  margin: 0 0 1.25rem;
+  font-style: italic;
+  border-radius: 0 8px 8px 0;
+}
+
+.tp-client-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.tp-client-card {
+  border-radius: 14px;
+  padding: 1rem 1.1rem;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-left: 4px solid var(--tp-accent, #333);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tp-client-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.tp-client-flag {
+  font-size: 1.8rem;
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+
+.tp-client-name {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: var(--tp-accent);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.1rem;
+}
+
+.tp-client-country {
+  font-size: 0.68rem;
+  color: #888;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+/* Additional row */
+.tp-additional-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid color-mix(in srgb, var(--color-text-main) 15%, transparent);
+}
+
+.tp-additional-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.78rem;
+  color: var(--color-text-main);
+  opacity: 0.8;
+}
+
+.tp-additional-item i {
+  color: var(--tp-gold);
+  font-size: 0.85rem;
+  width: 16px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* ── Panel 3 – Responsibilities ────────────────────────── */
+.tp-roles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.tp-role-card {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--color-text-main) 3%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-text-main) 8%, transparent);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.tp-role-card:hover {
+  transform: translateX(4px);
+  background: color-mix(in srgb, var(--tp-gold) 6%, transparent);
+  border-color: color-mix(in srgb, var(--tp-gold) 25%, transparent);
+}
+
+.tp-role-icon {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  background: color-mix(in srgb, var(--tp-gold) 12%, transparent);
+  color: var(--tp-gold);
+  font-size: 1rem;
+}
+
+.tp-role-body>strong {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--color-text-main);
+}
+
+.tp-role-body p {
+  font-size: 0.78rem;
+  line-height: 1.55;
+  color: var(--color-text-main);
+  opacity: 0.72;
+  margin: 0;
+}
+
+.tp-role-body p strong {
+  color: var(--tp-gold);
+  font-weight: 700;
+  opacity: 1;
+}
+
+/* Clients summary */
+.tp-clients-summary {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid color-mix(in srgb, var(--color-text-main) 12%, transparent);
+  font-size: 0.78rem;
+  line-height: 1.6;
+  color: var(--color-text-main);
+  opacity: 0.8;
+}
+
+.tp-clients-summary strong {
+  color: var(--tp-gold);
+  opacity: 1;
+}
+
+/* ── Panel 4 – Image Gallery ───────────────────────────── */
+.tp-gallery-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.95fr 0.95fr;
+  grid-template-rows: auto;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tp-gallery-item {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--color-text-main) 4%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-text-main) 8%, transparent);
+  cursor: pointer;
+}
+
+.tp-gallery-item--tall {
+  grid-row: span 2;
+}
+
+.tp-gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.5s ease;
+  min-height: 200px;
+}
+
+.tp-gallery-item--tall .tp-gallery-img {
+  min-height: 420px;
+}
+
+.tp-gallery-item:hover .tp-gallery-img {
+  transform: scale(1.05);
+}
+
+.tp-gallery-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(20, 15, 5, 0.75));
+  padding: 1.5rem 0.85rem 0.75rem;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.tp-gallery-item:hover .tp-gallery-overlay {
+  opacity: 1;
+}
+
+.tp-gallery-tag {
+  display: inline-block;
+  background: var(--tp-gold);
+  color: #1a1000;
+  font-size: 0.62rem;
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-bottom: 0.4rem;
+}
+
+.tp-gallery-caption {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.7rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ── Marquee ───────────────────────────────────────────── */
+.tp-marquee-container {
+  overflow: hidden;
+  margin-top: 0.5rem;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.tp-marquee-track {
+  display: flex;
+  width: max-content;
+}
+
+.tp-marquee-content {
+  display: flex;
+  gap: 0.65rem;
+  padding-right: 0.65rem;
+  animation: tpScrollMarquee 22s linear infinite;
+  flex-shrink: 0;
+}
+
+.tp-marquee-container:hover .tp-marquee-content {
+  animation-play-state: paused;
+}
+
+.tp-marquee-tag {
+  display: inline-block;
+  white-space: nowrap;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-main);
+  opacity: 0.5;
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid color-mix(in srgb, var(--color-text-main) 18%, transparent);
+  transition: opacity 0.2s ease;
+}
+
+.tp-marquee-container:hover .tp-marquee-tag {
+  opacity: 0.9;
+}
+
+@keyframes tpScrollMarquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-25%);
+  }
+}
+
+/* ── Panel 5 – Project Pipeline ────────────────────────── */
+.tp-pipeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tp-pipe-step {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.tp-pipe-icon-wrap {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(in srgb, var(--tp-gold) 14%, transparent);
+  border: 1.5px solid color-mix(in srgb, var(--tp-gold) 35%, transparent);
+  color: var(--tp-gold);
+  font-size: 0.9rem;
+  position: relative;
+  z-index: 1;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.tp-pipe-step:hover .tp-pipe-icon-wrap {
+  background: var(--tp-gold);
+  color: #1a1000;
+  transform: scale(1.1);
+}
+
+.tp-pipe-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  opacity: 0.85;
+  letter-spacing: 0.02em;
+  padding: 0.6rem 0;
+}
+
+.tp-pipe-connector {
+  position: absolute;
+  left: 18px;
+  top: 38px;
+  width: 2px;
+  height: 22px;
+  background: color-mix(in srgb, var(--tp-gold) 30%, transparent);
+  z-index: 0;
+}
+
+/* Brand palette */
+.tp-brand-palette {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.tp-b-color {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.14);
+  transition: transform 0.2s ease;
+}
+
+.tp-b-color:hover {
+  transform: scale(1.2);
+}
+
+/* ── Scroll Reveal ──────────────────────────────────────── */
+.tp-reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.75s ease-out, transform 0.75s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  will-change: opacity, transform;
+}
+
+.tp-reveal.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .tp-gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tp-gallery-item--tall {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .tp-gallery-item--tall .tp-gallery-img {
+    min-height: 280px;
+  }
+
+  .tp-gallery-overlay {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .tp-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tp-gallery-item--tall {
+    grid-column: span 1;
+  }
+
+  .tp-client-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
