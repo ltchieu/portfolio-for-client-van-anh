@@ -1,0 +1,584 @@
+/* === Root vars === */
+:root {
+  --tvc-red: #8B1A1A;
+  --tvc-gold: #C9A84C;
+  --tvc-cream: #F5F0E0;
+  --tvc-dark: #140800;
+}
+
+/* === Wrapper === */
+.tvc-project {
+  background: var(--color-bg-main);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* === Two-column layout === */
+.tvc-layout {
+  display: grid;
+  grid-template-columns: 0.45fr 0.55fr;
+  min-height: 540px;
+}
+
+/* ── Left info column ────────────────────────────────── */
+.tvc-info {
+  padding: 2rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  /* border-right: 1px solid color-mix(in srgb, var(--color-text-main) 10%, transparent); */
+}
+
+/* Branding row */
+.tvc-brand-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.tvc-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.tvc-logo--star {
+  width: 30px;
+  height: 30px;
+}
+
+.tvc-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-main);
+  opacity: 0.5;
+  margin-left: 0.2rem;
+}
+
+/* Title block */
+.tvc-title-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.tvc-subtitle-tag {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--tvc-gold);
+  margin: 0;
+}
+
+.tvc-title {
+  font-family: 'Dancing Script', 'Playfair Display', cursive;
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.05;
+  color: var(--tvc-red);
+  margin: 0;
+}
+
+.tvc-title em {
+  font-style: italic;
+  font-size: 2.2rem;
+  color: color-mix(in srgb, var(--tvc-red) 75%, var(--tvc-gold));
+}
+
+.tvc-brand-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  opacity: 0.6;
+  margin: 0.15rem 0 0;
+  letter-spacing: 0.02em;
+}
+
+/* ★ Achievement badge */
+.tvc-achievement {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  background: linear-gradient(135deg, var(--tvc-red) 0%, #5c0e0e 100%);
+  border-radius: 14px;
+  padding: 0.9rem 1.1rem;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(139, 26, 26, 0.35);
+}
+
+.tvc-achievement-glow {
+  position: absolute;
+  top: -40%;
+  right: -10%;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201, 168, 76, 0.35) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.tvc-achievement-icon {
+  font-size: 2rem;
+  color: var(--tvc-gold);
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 6px rgba(201, 168, 76, 0.5));
+}
+
+.tvc-achievement-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.tvc-achievement-top {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: var(--tvc-gold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.tvc-achievement-sub {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.88);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.tvc-achievement-stars {
+  margin-left: auto;
+  display: flex;
+  gap: 0.2rem;
+  color: var(--tvc-gold);
+  font-size: 0.75rem;
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+
+/* Description */
+.tvc-desc {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--color-text-main);
+  opacity: 0.78;
+  margin: 0;
+}
+
+.tvc-desc strong {
+  color: var(--tvc-red);
+  font-weight: 700;
+}
+
+/* Personal context */
+.tvc-personal {
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--tvc-gold) 6%, transparent);
+  border-left: 3px solid var(--tvc-gold);
+}
+
+.tvc-personal .tvc-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.82;
+  margin: 0;
+  font-style: italic;
+}
+
+/* TVC Concept — "When Heritage Awakens" */
+.tvc-concept {
+  position: relative;
+  display: flex;
+  gap: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  background: linear-gradient(135deg,
+      color-mix(in srgb, var(--tvc-dark) 92%, var(--tvc-red)) 0%,
+      color-mix(in srgb, var(--tvc-dark) 85%, var(--tvc-red)) 100%);
+  box-shadow:
+    0 6px 24px rgba(139, 26, 26, 0.18),
+    inset 0 1px 0 rgba(201, 168, 76, 0.12);
+}
+
+.tvc-concept-accent {
+  width: 5px;
+  flex-shrink: 0;
+  background: linear-gradient(180deg, var(--tvc-gold) 0%, var(--tvc-red) 100%);
+}
+
+.tvc-concept-body {
+  padding: 1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.tvc-concept-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--tvc-gold);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+.tvc-concept-title i {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.tvc-concept-tagline {
+  font-family: 'Dancing Script', 'Playfair Display', cursive;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.92);
+  margin: 0;
+  line-height: 1.35;
+  font-style: italic;
+}
+
+.tvc-concept-narrative {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.68);
+  margin: 0;
+}
+
+.tvc-concept-cta {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--tvc-gold);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.tvc-concept-cta i {
+  font-size: 0.8rem;
+  animation: tvcPulseHand 2s ease-in-out infinite;
+}
+
+@keyframes tvcPulseHand {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+}
+
+.tvc-concept-footnote {
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.45);
+  margin: 0;
+  font-style: italic;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 0.5rem;
+}
+
+/* Key highlights */
+.tvc-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.tvc-highlight-item {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  padding: 0.7rem 0.85rem;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--color-text-main) 3%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-text-main) 7%, transparent);
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.tvc-highlight-item:hover {
+  background: color-mix(in srgb, var(--tvc-red) 5%, transparent);
+  border-color: color-mix(in srgb, var(--tvc-red) 20%, transparent);
+}
+
+.tvc-hi-icon {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--tvc-red) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--tvc-red) 22%, transparent);
+  color: var(--tvc-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+.tvc-hi-body strong {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: var(--color-text-main);
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+.tvc-hi-body p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--color-text-main);
+  opacity: 0.7;
+  margin: 0;
+}
+
+/* Meta */
+.tvc-meta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+  margin-top: auto;
+}
+
+.tvc-meta span {
+  color: var(--color-text-main);
+  opacity: 0.6;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.tvc-meta a {
+  color: var(--tvc-red);
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: color 0.2s ease;
+}
+
+.tvc-meta a:hover {
+  color: var(--tvc-gold);
+}
+
+/* ── Right column ─────────────────────────────────────── */
+.tvc-right-col {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 6px;
+  overflow: hidden;
+}
+
+/* YouTube 16:9 */
+.tvc-video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+.tvc-video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* 2×2 grid */
+.tvc-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 110px);
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.tvc-grid-item {
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.tvc-grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease, filter 0.3s ease;
+}
+
+.tvc-grid-item:hover img {
+  transform: scale(1.06);
+  filter: brightness(1.06);
+}
+
+.tvc-grid-zoom-hint {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0);
+  color: white;
+  font-size: 1.3rem;
+  opacity: 0;
+  transition: opacity 0.25s ease, background 0.25s ease;
+  pointer-events: none;
+}
+
+.tvc-grid-item:hover .tvc-grid-zoom-hint {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.28);
+}
+
+/* ── Lightbox ─────────────────────────────────────────── */
+.tvc-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  animation: tvcFadeIn 0.22s ease;
+  cursor: zoom-out;
+}
+
+@keyframes tvcFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.tvc-lightbox-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6);
+  cursor: default;
+  animation: tvcImgIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes tvcImgIn {
+  from {
+    transform: scale(0.88);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.tvc-lightbox-close {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.5rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  backdrop-filter: blur(6px);
+  z-index: 10000;
+}
+
+.tvc-lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.28);
+  transform: scale(1.1);
+}
+
+/* ── Scroll reveal ────────────────────────────────────── */
+.tvc-reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  will-change: opacity, transform;
+}
+
+.tvc-reveal.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Responsive ───────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .tvc-layout {
+    grid-template-columns: 0.5fr 0.5fr;
+  }
+
+  .tvc-title {
+    font-size: 2.2rem;
+  }
+
+  .tvc-achievement-top {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .tvc-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .tvc-info {
+    border-right: none;
+    border-bottom: 1px solid color-mix(in srgb, var(--color-text-main) 10%, transparent);
+  }
+
+  .tvc-grid {
+    grid-template-rows: repeat(2, 120px);
+  }
+
+  .tvc-title {
+    font-size: 2rem;
+  }
+}
