@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion';
-import { FiMail, FiLinkedin, FiInstagram } from 'react-icons/fi';
-import { FaBehance } from 'react-icons/fa';
+import { FiMail } from 'react-icons/fi';
+import { FaPhone } from 'react-icons/fa';
 import '../styles/ContactInfo.css';
 
 const ContactInfo = () => {
   return (
     <section id="contact">
-      <motion.div 
+      <motion.div
         className="contact-container"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -19,21 +19,21 @@ const ContactInfo = () => {
         </p>
 
         <div className="contact-links">
-          <a href="mailto:hello@example.com" className="social-icon" aria-label="Email">
+          <a href="mailto:vananhvo2309@gmail.com" className="social-icon" aria-label="Email">
             <FiMail />
           </a>
-          <a href="#" className="social-icon" aria-label="Behance">
-            <FaBehance />
+          <a href="tel:+84395673098" className="social-icon" aria-label="PhoneNumber">
+            <FaPhone />
           </a>
-          <a href="#" className="social-icon" aria-label="LinkedIn">
+          {/* <a href="#" className="social-icon" aria-label="LinkedIn">
             <FiLinkedin />
           </a>
           <a href="#" className="social-icon" aria-label="Instagram">
             <FiInstagram />
-          </a>
+          </a> */}
         </div>
 
-        <button className="btn btn-primary" onClick={() => window.location.href = 'mailto:hello@example.com'}>
+        <button className="btn btn-primary" onClick={() => window.location.href = 'mailto:vananhvo2309@gmail.com'}>
           SAY HELLO
         </button>
 

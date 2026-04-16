@@ -1,0 +1,411 @@
+/* MenQuanExperience.css */
+.mq-panel-premium {
+    background-color: var(--color-bg-main);
+    transition: var(--transition-smooth);
+    background-image: radial-gradient(circle at top right,
+    rgba(200, 155, 60, 0.08),
+    transparent 60%)
+}
+
+.mq-intro-copy {
+    margin-bottom: 0;
+}
+
+.mq-intro-copy p {
+    color: var(--color-text-main);
+    font-weight: 500;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.mq-client-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-top: 1rem;
+}
+
+.mq-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: #fff;
+    background: var(--mq-chip-color, var(--color-text-main));
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.mq-chip:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.06);
+}
+
+.mq-industry-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+    padding: 6px 14px;
+    border-radius: 8px;
+    background: color-mix(in srgb, var(--color-highlight-2) 12%, transparent);
+    border: 1px solid color-mix(in srgb, var(--color-highlight-2) 30%, transparent);
+    color: var(--color-highlight-2);
+    font-size: 0.72rem;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.mq-metrics-highlight {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mq-image-container {
+    position: relative;
+    width: 40%;
+    min-width: 280px;
+    margin: 0 auto;
+    padding: 0.65rem;
+    border-radius: 18px;
+    overflow: visible;
+    border: 1px solid rgba(20, 61, 96, 0.2);
+    background: #151515;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.mq-analytics-img {
+    width: 100%;
+    display: block;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+/* Callouts */
+.mq-stat-callout {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 10;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.42rem 0.7rem;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--color-bg-main) 92%, transparent);
+    border: 1px solid color-mix(in srgb, var(--color-text-main) 18%, transparent);
+    box-shadow: 0 8px 20px rgba(20, 61, 96, 0.12);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    animation: mqCalloutFloat 3.4s ease-in-out infinite;
+}
+
+.mq-stat-callout::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--callout-accent, var(--color-highlight-2));
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--callout-accent) 28%, transparent);
+    flex-shrink: 0;
+    animation: mqPulseDot 2.2s ease-in-out infinite;
+}
+
+.mq-callout-value {
+    font-family: 'PP Neue Bit', sans-serif;
+    color: var(--color-text-main);
+    font-size: 1.15rem;
+    line-height: 1;
+}
+
+.mq-callout-delta {
+    color: var(--color-text-main);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 0.78rem;
+    line-height: 1;
+    opacity: 0.95;
+    padding: 0.18rem 0.45rem;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--callout-accent) 16%, var(--color-bg-main));
+    border: 1px solid color-mix(in srgb, var(--callout-accent) 28%, transparent);
+}
+
+.mq-stat-callout--primary {
+    animation-delay: 0s;
+}
+
+.mq-stat-callout--secondary {
+    animation-delay: 0.9s;
+}
+
+.mq-callout-sparkle {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    overflow: hidden;
+}
+
+.mq-callout-sparkle::after {
+    content: '';
+    position: absolute;
+    top: -120%;
+    left: -35%;
+    width: 38%;
+    height: 300%;
+    transform: rotate(18deg);
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0) 20%,
+        rgba(255, 255, 255, 0.35) 50%,
+        rgba(255, 255, 255, 0) 80%,
+        transparent 100%
+    );
+    animation: mqCalloutShine 3.8s ease-in-out infinite;
+    opacity: 0.8;
+}
+
+@keyframes mqCalloutFloat {
+    0%,
+    100% {
+        transform: translate(-50%, -50%) translateY(0);
+        box-shadow: 0 8px 20px rgba(20, 61, 96, 0.12);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) translateY(-4px);
+        box-shadow: 0 14px 28px rgba(20, 61, 96, 0.16);
+    }
+}
+
+@keyframes mqPulseDot {
+    0%,
+    100% {
+        box-shadow: 0 0 0 4px color-mix(in srgb, var(--callout-accent) 20%, transparent);
+    }
+
+    50% {
+        box-shadow: 0 0 0 8px color-mix(in srgb, var(--callout-accent) 10%, transparent);
+    }
+}
+
+@keyframes mqCalloutShine {
+    0%,
+    100% {
+        transform: translateX(-120%) rotate(18deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    45% {
+        opacity: 0.85;
+    }
+
+    65% {
+        transform: translateX(320%) rotate(18deg);
+        opacity: 0;
+    }
+}
+
+/* Anchors for first image callouts (relative to container) */
+.mq-h-video-views {
+    --callout-accent: var(--color-highlight-2);
+    left: 79%;
+    top: 31%;
+}
+
+.mq-h-reached-audience {
+    --callout-accent: var(--color-highlight-1);
+    left: 79%;
+    top: 40%;
+}
+
+/* Peaks emphasis (second image) */
+.mq-chart-peak {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9;
+    left: 50%;
+    top: 50%;
+    width: 34%;
+    height: 12%;
+    border-radius: 18px;
+    background: linear-gradient(180deg,
+        color-mix(in srgb, var(--color-highlight-2) 14%, transparent),
+        color-mix(in srgb, var(--color-highlight-1) 10%, transparent));
+    border: 1px solid color-mix(in srgb, var(--color-highlight-2) 24%, transparent);
+    box-shadow:
+        0 0 0 4px color-mix(in srgb, var(--color-highlight-2) 8%, transparent),
+        inset 0 0 0 1px color-mix(in srgb, var(--color-bg-main) 8%, transparent);
+}
+
+.mq-chart-peak::after {
+    content: attr(data-label);
+    position: absolute;
+    left: 50%;
+    top: -0.8rem;
+    transform: translateX(-50%);
+    padding: 0.28rem 0.6rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-main);
+    background: color-mix(in srgb, var(--color-bg-main) 94%, transparent);
+    border: 1px solid color-mix(in srgb, var(--color-text-main) 14%, transparent);
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+.mq-h-chart-top {
+    left: 77%;
+    top: 45%;
+    width: 30%;
+    height: 24%;
+}
+
+.mq-h-chart-bottom {
+    left: 75%;
+    top: 79%;
+    width: 26%;
+    height: 19%;
+}
+
+.mq-growth-card {
+    background-color: var(--color-bg-secondary);
+    padding: 1.5rem;
+    border-radius: 16px;
+    border-left: 6px solid var(--color-highlight-2);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    margin-top: 1.5rem;
+}
+
+.mq-growth-text {
+    color: var(--color-text-main);
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.mq-video-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.mq-video-wrapper {
+    aspect-ratio: 9 / 16;
+    background: #000;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.mq-video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.mq-section-label {
+    font-family: 'PP Neue Bit', sans-serif;
+    font-size: 1.8rem;
+    color: var(--color-text-main);
+    margin-bottom: 1rem;
+    display: block;
+    text-shadow: 2px 2px 0px rgba(20, 61, 96, 0.08);
+}
+
+@media (max-width: 768px) {
+    .mq-metrics-highlight {
+        flex-direction: column;
+        max-width: 420px;
+    }
+
+    .mq-stat-callout {
+        transform: translate(-50%, -50%) scale(0.98);
+    }
+
+    .mq-image-container {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .mq-video-gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .mq-growth-text {
+        font-size: 1.05rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .mq-metrics-highlight {
+        max-width: 100%;
+    }
+
+    .mq-stat-callout {
+        padding: 0.38rem 0.62rem;
+        gap: 0.45rem;
+    }
+
+    .mq-image-container {
+        padding: 0.45rem;
+        border-radius: 14px;
+    }
+
+    .mq-callout-value {
+        font-size: 1rem;
+    }
+
+    .mq-callout-delta {
+        font-size: 0.78rem;
+    }
+
+    /* Nudge callouts slightly to avoid collisions on narrower screens */
+    .mq-h-video-views {
+        left: 76%;
+        top: 30%;
+    }
+
+    .mq-h-reached-audience {
+        left: 76%;
+        top: 39.5%;
+    }
+
+    .mq-h-chart-top {
+        left: 75%;
+        top: 56%;
+        width: 32%;
+    }
+
+    .mq-h-chart-bottom {
+        left: 85%;
+        top: 83%;
+    }
+}

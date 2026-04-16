@@ -4,6 +4,7 @@ const ToanPhatExperience = () => {
   const img1 = new URL('../assets/images/WorkExperience/toanphat (1).png', import.meta.url).href;
   const img2 = new URL('../assets/images/WorkExperience/toanphat (2).png', import.meta.url).href;
   const img3 = new URL('../assets/images/WorkExperience/toanphat (3).png', import.meta.url).href;
+  const companyVideo = 'https://www.youtube.com/embed/Bkcy28-2UrI';
 
 
 
@@ -173,6 +174,20 @@ const ToanPhatExperience = () => {
               <p className="tp-gallery-caption">Boxes · Trays · Labels · Hangtags</p>
             </div>
           </div>
+        </div>
+
+        <div className="tp-video-showcase">
+          <div className="tp-video-frame">
+            <iframe
+              src={companyVideo}
+              title="Toan Phat company video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          </div>
+          <p className="tp-video-caption">
+            A visual look at Toan Phat&apos;s company profile, production capability, and brand presentation.
+          </p>
         </div>
 
         {/* Marquee */}

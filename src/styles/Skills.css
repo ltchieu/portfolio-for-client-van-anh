@@ -1,62 +1,355 @@
-.skills-container {
+.skills-section {
+  padding: 6rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.skills-header {
+  margin-bottom: 4rem;
+  text-align: left;
+}
+
+.skills-intro {
+  font-size: 1.1rem;
+  opacity: 0.8;
+  margin-top: -1.5rem;
+  max-width: 600px;
+}
+
+.skills-main-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.category-label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: var(--color-text-main);
+  opacity: 0.6;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.category-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: color-mix(in srgb, var(--color-text-main) 15%, transparent);
+}
+
+/* Marketing Grid */
+.marketing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.marketing-card {
+  background: var(--color-bg-secondary);
+  padding: 2rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  border: 1px solid rgba(20, 61, 96, 0.05);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.marketing-card:hover {
+  transform: translateY(-8px);
+  background: white;
+  box-shadow: 0 20px 40px rgba(20, 61, 96, 0.08);
+  border-color: var(--color-highlight-1);
+}
+
+.card-icon {
+  font-size: 2rem;
+  color: var(--color-highlight-2);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(217, 113, 151, 0.1);
+  border-radius: 12px;
+}
+
+.card-content h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--color-text-main);
+}
+
+.card-content p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  opacity: 0.8;
+}
+
+/* Sidebar Columns */
+.sidebar-column {
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
 
-.skills-category {
-  background-color: var(--color-bg-secondary);
-  padding: 2.5rem;
-  border-radius: 20px;
-  box-shadow: 0 5px 15px rgba(20, 61, 96, 0.05);
+.skills-box {
+  width: 100%;
 }
 
-.category-title {
-  font-size: 1.5rem;
-  color: var(--color-text-main);
-  margin-bottom: 2rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.skills-list {
+/* Tools Row */
+.tools-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
-.skill-pill {
-  background-color: var(--color-bg-main);
-  color: var(--color-text-main);
-  padding: 0.8rem 1.5rem;
+.tool-item {
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  cursor: help;
+}
+
+.tool-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Soft Skills Pill Grid */
+.soft-skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.soft-skill-pill {
+  background: white;
+  padding: 0.6rem 1.2rem;
   border-radius: 50px;
+  font-size: 0.9rem;
   font-weight: 600;
-  font-size: 1rem;
-  border: 2px solid var(--color-highlight-1);
-  transition: var(--transition-smooth);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  border: 1px solid color-mix(in srgb, var(--color-highlight-1) 30%, transparent);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.pill-icon {
+  color: var(--color-highlight-2);
+  display: flex;
+  font-size: 1.1rem;
+}
+
+/* Certificate Card */
+.cert-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: scale(1.02);
+}
+
+.cert-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.cert-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cert-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+}
+
+.toeic-badge {
+  background: var(--color-highlight-2);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 10px 20px rgba(217, 113, 151, 0.4);
+}
+
+.badge-label {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  opacity: 0.9;
+}
+
+.badge-score {
+  font-family: 'PP Neue Bit', sans-serif;
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.cert-info {
+  padding: 1.2rem 1.5rem;
+}
+
+.cert-info h4 {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+
+.cert-info p {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* Zoom hint for certificate */
+.cert-zoom-hint {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(217, 113, 151, 0);
+  color: white;
+  font-size: 2.5rem;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.cert-card:hover .cert-zoom-hint {
+  opacity: 1;
+  scale: 1.1;
+}
+
+/* Lightbox Overlay */
+.skills-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  cursor: zoom-out;
+}
+
+.skills-lightbox-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.5);
   cursor: default;
 }
 
-.skill-pill:hover {
-  background-color: var(--color-highlight-2);
-  color: var(--color-bg-main);
-  border-color: var(--color-highlight-2);
-  transform: translateY(-3px);
-  box-shadow: 0 5px 10px rgba(217, 113, 151, 0.3);
+.skills-lightbox-close {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10000;
+}
+
+.skills-lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .skills-main-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .sidebar-column {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .tech-stack-box,
+  .soft-skills-box,
+  .cert-box {
+    flex: 1 1 300px;
+  }
 }
 
 @media (max-width: 768px) {
-  .skills-category {
+  .skills-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .marketing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar-column {
+    flex-direction: column;
+  }
+
+  .marketing-card {
     padding: 1.5rem;
   }
 
-  .category-title {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
+  .cert-image-wrapper {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (max-width: 480px) {
+  .toeic-badge {
+    padding: 0.4rem 0.8rem;
   }
 
-  .skill-pill {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.85rem;
+  .badge-score {
+    font-size: 1.8rem;
   }
 }

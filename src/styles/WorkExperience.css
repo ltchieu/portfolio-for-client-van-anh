@@ -1,3 +1,7 @@
+.we-section {
+  overflow: visible !important;
+}
+
 .we-board {
   margin-top: 2rem;
   background-color: var(--color-bg-main);
@@ -12,6 +16,10 @@
   width: 100%;
   max-width: 100%;
   overflow: hidden;
+}
+
+.we-board--highland {
+  overflow: visible;
 }
 
 .we-board--spaced {
