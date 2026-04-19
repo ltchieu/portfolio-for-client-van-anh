@@ -65,6 +65,7 @@ const AboutMe = () => {
             transition={{ type: "spring", stiffness: 400, damping: 30 }}
           />
         </div>
+
       </motion.div>
 
       <motion.div
@@ -82,75 +83,86 @@ const AboutMe = () => {
         </div>
 
         <div className="info-grid">
-          <div className="about-block">
-            <h2 className="block-title">EDUCATION</h2>
-            <ul className="edu-list">
-              <li>
-                <span className="edu-icon">✿</span>
-                <div className="edu-info">
-                  <strong>Master's in Marketing (Applied)</strong>
-                  <span className="edu-meta">UEF University <span>—</span> 2021 - 2025</span>
-                </div>
-              </li>
-              <li>
-                <span className="edu-icon">✿</span>
-                <div className="edu-info">
-                  <strong>Bachelor of Int. Business</strong>
-                  <span className="edu-meta">UEF University <span>—</span> 2021 - 2024</span>
-                </div>
-              </li>
-            </ul>
+          <div className="info-left-col" style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+            <div className="about-block">
+              <h2 className="block-title">EDUCATION</h2>
+              <ul className="edu-list">
+                <li>
+                  <span className="edu-icon">✿</span>
+                  <div className="edu-info">
+                    <strong>Master's in Marketing (Applied)</strong>
+                    <span className="edu-meta">UEH University <span>—</span> 2025 - 2027</span>
+                  </div>
+                </li>
+                <li>
+                  <span className="edu-icon">✿</span>
+                  <div className="edu-info">
+                    <strong>Bachelor of Int. Business</strong>
+                    <span className="edu-meta">UEH University <span>—</span> 2021 - 2024</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div className="about-block">
+              <h2 className="block-title">LANGUAGE</h2>
+              <ul className="edu-list" style={{ flexDirection: 'row', gap: '3rem' }}>
+                <li>
+                  <span className="edu-icon">✦</span>
+                  <div className="edu-info">
+                    <strong>Vietnamese</strong>
+                    <span className="edu-meta">Native</span>
+                  </div>
+                </li>
+                <li>
+                  <span className="edu-icon">✦</span>
+                  <div className="edu-info">
+                    <strong>English</strong>
+                    <span className="edu-meta">Upper-Intermediate</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
 
-          <div className="about-block">
-            <h2 className="block-title">EXPERIENCE</h2>
-            <ul className="edu-list">
-              <li>
-                <span className="edu-icon">✦</span>
-                <div className="edu-info">
-                  <strong>Marketing Executive</strong>
-                  <span className="edu-meta">MSL Concept <span>—</span> Feb 24 - Present</span>
-                </div>
-              </li>
-              <li>
-                <span className="edu-icon">✦</span>
-                <div className="edu-info">
-                  <strong>Sales & Marketing Exec</strong>
-                  <span className="edu-meta">Tien Phat P&P <span>—</span> Jul 23 - Dec 23</span>
-                </div>
-              </li>
-              <li>
-                <span className="edu-icon">✦</span>
-                <div className="edu-info">
-                  <strong>Social Media Marketing</strong>
-                  <span className="edu-meta">Highlands Coffee <span>—</span> Aug 22 - Apr 23</span>
-                </div>
-              </li>
-            </ul>
+          <div className="info-right-col">
+            <div className="about-block">
+              <h2 className="block-title">EXPERIENCE</h2>
+              <ul className="edu-list">
+                <li>
+                  <span className="edu-icon">✦</span>
+                  <div className="edu-info">
+                    <strong>Marketing Executive</strong>
+                    <span className="edu-meta">H&L Concept <span>—</span> (01/2026 - Present)</span>
+                  </div>
+                </li>
+                <li>
+                  <span className="edu-icon">✦</span>
+                  <div className="edu-info">
+                    <strong>Sales & Marketing Exec</strong>
+                    <span className="edu-meta">Toan Phat<span>—</span> (07/2025 - 12/2025)</span>
+                  </div>
+                </li>
+                <li>
+                  <span className="edu-icon">✦</span>
+                  <div className="edu-info">
+                    <strong>Social Media Marketing</strong>
+                    <span className="edu-meta">Highlands Coffee <span>—</span> (08/2024 - 04/2025)</span>
+                  </div>
+                </li>
+                <li>
+                  <span className="edu-icon">✦</span>
+                  <div className="edu-info">
+                    <strong>Account Executive</strong>
+                    <span className="edu-meta">Brainad Agency <span>—</span> (07/2024 - 01/2025)</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
-        <div className="about-block">
-          <h2 className="block-title">LANGUAGE</h2>
-          <ul className="edu-list" style={{ flexDirection: 'row', gap: '3rem' }}>
-            <li>
-              <span className="edu-icon">✦</span>
-              <div className="edu-info">
-                <strong>Vietnamese</strong>
-                <span className="edu-meta">Native</span>
-              </div>
-            </li>
-            <li>
-              <span className="edu-icon">✦</span>
-              <div className="edu-info">
-                <strong>English</strong>
-                <span className="edu-meta">Upper-Intermediate</span>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <div className="photo-collage" style={{ width: '100%', position: 'relative', height: '250px' }}>
+        <div className="photo-collage">
           <motion.img src={img5} className="polaroid" initial={{ rotate: -8, x: -190, y: 0 }} whileHover={{ scale: 1.2, zIndex: 10, rotate: 0, y: -20 }} />
           <motion.img src={img2} className="polaroid" initial={{ rotate: 5, x: -90, y: 10 }} whileHover={{ scale: 1.2, zIndex: 10, rotate: 0, y: -20 }} />
           <motion.img src={img3} className="polaroid" initial={{ rotate: -5, x: 0, y: 0 }} whileHover={{ scale: 1.2, zIndex: 10, rotate: 0, y: -20 }} />

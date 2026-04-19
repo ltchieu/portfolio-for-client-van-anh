@@ -90,8 +90,9 @@
 }
 
 .we-title {
-  font-family: 'PP Neue Bit', sans-serif;
-  font-size: 3rem;
+  font-family: var(--font-main);
+  font-weight: 800;
+  font-size: 2rem;
   color: var(--color-text-main);
   line-height: 1;
   margin-bottom: 0.5rem;
@@ -132,7 +133,8 @@
 }
 
 .we-kpi-value {
-  font-family: 'PP Neue Bit', sans-serif;
+  font-family: var(--font-main);
+  font-weight: 800;
   font-size: 2rem;
   color: var(--color-text-main);
   line-height: 1;
@@ -282,7 +284,8 @@
 }
 
 .we-metric-value {
-  font-family: 'PP Neue Bit', sans-serif;
+  font-family: var(--font-main);
+  font-weight: 800;
   font-size: 2.2rem;
   line-height: 1;
 }
@@ -350,7 +353,8 @@
 }
 
 .we-pillar-title {
-  font-family: 'PP Neue Bit', sans-serif;
+  font-family: var(--font-main);
+  font-weight: 800;
   font-size: 1.8rem;
   color: var(--color-text-main);
   line-height: 1;

@@ -78,7 +78,7 @@ const BrainAgency = () => {
 
       {/* (1) Campaign Metrics */}
       <div className="we-panel we-hero ba-reveal" style={{ borderLeft: '1px solid color-mix(in srgb, var(--color-text-main) 35%, transparent)' }}>
-        <div className="we-panel-label">(1) Campaign Results</div>
+        <div className="we-panel-label">Campaign Results</div>
         <div className="ba-metrics-grid">
           {campaigns.map((c, i) => (
             <div className="ba-metric-card" key={i} style={{ '--ba-accent': c.color } as React.CSSProperties}>
@@ -95,7 +95,7 @@ const BrainAgency = () => {
 
       {/* (2) KV Showcase */}
       <div className="we-panel we-metrics ba-reveal">
-        <div className="we-panel-label">(2) Key Visuals</div>
+        <div className="we-panel-label">Key Visuals</div>
         <p className="ba-context-quote" style={{ marginBottom: '1.5rem' }}>
           I've had the opportunity to work with several well-known brands such as
           <strong> Maybelline</strong>, <strong>Modern</strong>, and <strong>Highlands</strong>, etc.
@@ -119,7 +119,7 @@ const BrainAgency = () => {
 
       {/* (4) Content Gallery */}
       <div className="we-panel we-typography ba-reveal" style={{ gridArea: 'typography' }}>
-        <div className="we-panel-label">(4) Content Gallery</div>
+        <div className="we-panel-label">Content Gallery</div>
         <p className="we-body">
           High-performing content crafted for top brands across TikTok & Instagram Reels —
           influencer-led, data-driven, and built to convert.
@@ -166,7 +166,7 @@ const BrainAgency = () => {
 
       {/* (3) Platform & Role */}
       <div className="we-panel we-patterns ba-reveal">
-        <div className="we-panel-label">(3) Role & Platforms</div>
+        <div className="we-panel-label">Role & Platforms</div>
         <div className="ba-role-list">
           <div className="ba-role-item">
             <span className="ba-role-icon"><i className="fa-solid fa-clapperboard"></i></span>

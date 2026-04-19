@@ -52,7 +52,7 @@ const MenQuanExperience = () => {
 
       {/* (2) Analytics Highlight Panel */}
       <div className="we-panel we-hero reveal-on-scroll">
-        <div className="we-panel-label">(1) Performance Analytics</div>
+        <div className="we-panel-label">Performance Analytics</div>
         
         <div className="mq-metrics-highlight">
           <div className="mq-image-container">
@@ -88,7 +88,7 @@ const MenQuanExperience = () => {
 
       {/* (3) Video Content Showcase */}
       <div className="we-panel we-typography reveal-on-scroll" style={{ gridArea: 'typography' }}>
-        <div className="we-panel-label">(2) Key Content Development</div>
+        <div className="we-panel-label">Key Content Development</div>
         <span className="mq-section-label">Some of the key videos I developed:</span>
 
         <div className="mq-video-gallery">
@@ -119,7 +119,7 @@ const MenQuanExperience = () => {
 
       {/* (4) Pattern / Identity Decoration */}
       <div className="we-panel we-patterns reveal-on-scroll">
-        <div className="we-panel-label">(3) Brand Growth</div>
+        <div className="we-panel-label">Brand Growth</div>
         <div className="we-metric-grid">
             <div className="we-metric-card m1">
                 <div className="we-metric-value">162K</div>

@@ -128,7 +128,8 @@
 }
 
 .mq-callout-value {
-    font-family: 'PP Neue Bit', sans-serif;
+    font-family: var(--font-main);
+    font-weight: 800;
     color: var(--color-text-main);
     font-size: 1.15rem;
     line-height: 1;
@@ -332,7 +333,8 @@
 }
 
 .mq-section-label {
-    font-family: 'PP Neue Bit', sans-serif;
+    font-family: var(--font-main);
+    font-weight: 800;
     font-size: 1.8rem;
     color: var(--color-text-main);
     margin-bottom: 1rem;

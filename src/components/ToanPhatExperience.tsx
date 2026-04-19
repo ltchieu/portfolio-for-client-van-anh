@@ -93,7 +93,7 @@ const ToanPhatExperience = () => {
 
       {/* (2) Global Clients Panel */}
       <div className="we-panel we-hero tp-reveal">
-        <div className="we-panel-label">(1) Global Clients</div>
+        <div className="we-panel-label">Global Clients</div>
         <p className="tp-context-quote">
           Delivered end-to-end packaging solutions for multinational clients across{' '}
           <strong>4 countries</strong>, ensuring international quality standards from design to delivery.
@@ -126,7 +126,7 @@ const ToanPhatExperience = () => {
 
       {/* (3) Responsibilities Panel */}
       <div className="we-panel we-metrics tp-reveal">
-        <div className="we-panel-label">(2) Key Responsibilities</div>
+        <div className="we-panel-label">Key Responsibilities</div>
         <div className="tp-roles-list">
           {responsibilities.map((r, i) => (
             <div key={i} className="tp-role-card">
@@ -144,7 +144,7 @@ const ToanPhatExperience = () => {
 
       {/* (4) Full-width Image Gallery */}
       <div className="we-panel we-typography tp-reveal" style={{ gridArea: 'typography' }}>
-        <div className="we-panel-label">(3) Company Showcase</div>
+        <div className="we-panel-label">Company Showcase</div>
         <p className="we-body" style={{ marginBottom: '1.5rem' }}>
           From ISO-certified manufacturing facilities to a diverse packaging portfolio — Toan Phat
           delivers premium solutions for global brands.
@@ -210,7 +210,7 @@ const ToanPhatExperience = () => {
 
       {/* (5) Project Flow / Side Panel */}
       <div className="we-panel we-patterns tp-reveal">
-        <div className="we-panel-label">(4) Project Flow</div>
+        <div className="we-panel-label">Project Flow</div>
 
         <div className="tp-pipeline">
           {pipeline.map((p, i) => (

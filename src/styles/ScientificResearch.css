@@ -51,7 +51,8 @@
 }
 
 .sr-title {
-  font-family: 'Dancing Script', cursive;
+  font-family: var(--font-main);
+  font-weight: 800;
   font-size: 2.5rem;
   font-weight: 800;
   line-height: 1.1;
@@ -60,7 +61,8 @@
 }
 
 .sr-subtitle-tag {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-main);
+  font-weight: 800;
   font-size: 1.1rem;
   font-style: italic;
   font-weight: 400;
@@ -72,7 +74,8 @@
 
 /* Description */
 .sr-desc {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-main);
+  font-weight: 400;
   font-size: 1.05rem;
   line-height: 1.4;
   color: var(--color-text-main);
@@ -119,7 +122,8 @@
 }
 
 .sr-achievement-sub {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-main);
+  font-weight: 700;
   font-size: 1rem;
   font-weight: 500;
   color: #ffffff;
@@ -190,7 +194,8 @@
 }
 
 .sr-current-tagline {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-main);
+  font-weight: 800;
   font-size: 1.1rem;
   color: var(--color-text-main);
   margin: 0;
@@ -213,7 +218,8 @@
 
 .sr-current-item p {
   margin: 0;
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-main);
+  font-weight: 400;
   font-size: 1.05rem;
   line-height: 1.5;
   color: var(--color-text-main);

@@ -100,7 +100,7 @@ const HighlandExperience = () => {
 
       {/* (2) Follower Growth Section */}
       <div className="we-panel we-hero reveal-on-scroll" style={{ position: 'relative' }}>
-        <div className="we-panel-label">(1) Follower Growth</div>
+        <div className="we-panel-label">Follower Growth</div>
         <div className="hl-growth-narrative">
           <div className="hl-comparison-v2">
             <div className="hl-phone-block">
@@ -138,7 +138,7 @@ const HighlandExperience = () => {
 
       {/* (3) Performance Metrics */}
       <div className="we-panel we-metrics reveal-on-scroll">
-        <div className="we-panel-label">(2) Performance Metrics</div>
+        <div className="we-panel-label">Performance Metrics</div>
         <p className="hl-timeline-text">
           From <strong>01/09/2024</strong> to <strong>12/01/2025</strong>, the data speaks for itself:
         </p>
@@ -154,7 +154,7 @@ const HighlandExperience = () => {
 
       {/* (4) Massive Viewership & Interactive Feedback */}
       <div className="we-panel we-typography" style={{ gridArea: 'typography' }}>
-        <div className="we-panel-label">(4) Massive Viewership & Community</div>
+        <div className="we-panel-label">Massive Viewership & Community</div>
         <div className="hl-viewership-intro">
           <p className="we-body">
             Some of our videos reached massive viewership — especially one that hit <span><strong>1.2M views!</strong></span>
@@ -221,7 +221,7 @@ const HighlandExperience = () => {
 
       {/* (3) Brand Identity */}
       <div className="we-panel we-patterns reveal-on-scroll">
-        <div className="we-panel-label">(3) Brand Identity</div>
+        <div className="we-panel-label">Brand Identity</div>
         <img src={imgs.brandLogo} alt="Highlands Logo Identity" className="hl-brand-logo-img" />
         <div className="hl-palette small">
           <div className="hl-color red"></div>

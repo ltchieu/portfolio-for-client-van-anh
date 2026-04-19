@@ -1,3 +1,9 @@
+.welcome-container,
+.welcome-container * {
+  /* Welcome component should keep its original design-specific fonts */
+  font-family: inherit;
+}
+
 .welcome-container {
   background-color: var(--color-text-main);
   width: 100vw !important;
