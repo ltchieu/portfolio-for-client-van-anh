@@ -64,8 +64,21 @@ const TvcProject = () => {
           {/* Title */}
           <div className="tvc-title-block">
             <p className="tvc-subtitle-tag">MẬU THÂN 1968</p>
-            <h3 className="tvc-title">TINH HOA <em>không ngủ</em></h3>
+            <h3 className="tvc-title">Tinh Hoa Không Ngủ</h3>
             <p className="tvc-brand-name">Bảo Tàng Lịch Sử TP.HCM</p>
+            <div className="tvc-meta-link">
+              <span>
+                View full project:{' '}
+                <a
+                  href="https://drive.google.com/file/d/1QFtYWIUZGVw8eiUb1lFEhBlaNQ7AnO4E/view"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Click here
+                </a>
+              </span>
+            </div>
+
           </div>
 
           {/* ★ Achievement badge */}
@@ -86,18 +99,9 @@ const TvcProject = () => {
           {/* Personal context */}
           <div className="tvc-personal">
             <p className="tvc-desc">
-              I joined this competition to gain more knowledge and challenge myself.
-              During the process, my team and I worked together on research, brainstorming ideas,
-              and creating a TVC for the <strong>Ho Chi Minh City Museum of History</strong>.
+              I joined this competition to challenge myself and gain more hands-on experience. Working with my team, I contributed to research, idea development, and creating a TVC for the <strong>Ho Chi Minh City Museum of History</strong>.
             </p>
           </div>
-
-          {/* Description */}
-          {/* <p className="tvc-desc">
-            A 60-second TVC concept blending AR technology with Vietnamese heritage — designed
-            to revive museum tourism for Gen Z. Created as part of the{' '}
-            <strong>TVCreate national competition</strong>.
-          </p> */}
 
           {/* TVC Concept — "When Heritage Awakens" */}
           <div className="tvc-concept">
@@ -111,33 +115,17 @@ const TvcProject = () => {
                 History was never silent — just waiting to be heard.
               </p>
               <p className="tvc-concept-narrative">
-                In a quiet museum, a group of bored young visitors scan a QR code… and suddenly,
-                everything comes to life. Artifacts begin to tell their own stories — not through
-                dry text, but through emotional, first-person voices.
+                In a quiet museum, a group of young visitors scan a QR code - and suddenly, everything comes to life.
+                Artifacts begin to tell their own stories, not through dry text, but through emotional, first-person voices.
               </p>
               <p className="tvc-concept-cta">
                 <i className="fa-solid fa-hand-pointer" />
                 Touch to awaken. History has never been old.
               </p>
               <p className="tvc-concept-footnote">
-                This TVC reimagines the museum as a living space, where every object has a soul
-                and every touch revives the past.
+                This TVC reimagines the museum as a living space, where every object has a soul and every interaction revives the past.
               </p>
             </div>
-          </div>
-
-
-
-          {/* Meta */}
-          <div className="tvc-meta">
-            <span><i className="fa-solid fa-hashtag" /> LịchSửThứcGiấc</span>
-            <a
-              href="https://drive.google.com/file/d/1QFtYWIUZGVw8eiUb1lFEhBlaNQ7AnO4E/view"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fa-brands fa-google-drive" /> Full project deck
-            </a>
           </div>
         </div>
 
@@ -169,19 +157,6 @@ const TvcProject = () => {
               </div>
             ))}
           </div>
-
-          {/* Key highlights */}
-          {/* <div className="tvc-highlights">
-            {highlights.map((h, i) => (
-              <div key={i} className="tvc-highlight-item">
-                <div className="tvc-hi-icon"><i className={h.icon} /></div>
-                <div className="tvc-hi-body">
-                  <strong>{h.label}</strong>
-                  <p>{h.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div> */}
         </div>
       </div>
 

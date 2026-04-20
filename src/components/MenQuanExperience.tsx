@@ -4,6 +4,9 @@ import '../styles/MenQuanExperience.css';
 const MenQuanExperience = () => {
   const menquanImg = new URL('../assets/images/WorkExperience/menquan.png', import.meta.url).href;
   const menquan1Img = new URL('../assets/images/WorkExperience/menquan1.png', import.meta.url).href;
+  const logo1 = new URL('../assets/images/WorkExperience/menquan2.png', import.meta.url).href;
+  const logo2 = new URL('../assets/images/WorkExperience/menquan3.png', import.meta.url).href;
+  const logo3 = new URL('../assets/images/WorkExperience/menquan4.png', import.meta.url).href;
   const brands = [
     { name: 'Men Quan', tone: 'var(--color-highlight-2)' },
     { name: 'Renge Ramen', tone: 'var(--color-text-main)' },
@@ -26,9 +29,8 @@ const MenQuanExperience = () => {
 
         <div className="we-body mq-intro-copy">
           <p>
-            I worked on Marketing Communications & Trade Marketing for Men Quán and Renge Ramen. 
-            I developed communication and trade marketing plans, leading content, visual direction, 
-            activations, competitor analysis, and growth strategy.
+            Led Marketing Communications and Trade Marketing initiatives for Men Quán and Renge Ramen. Developed communication strategies and content directions based on audience behavior and platform trends, while coordinating visual execution and activation plans.
+            Conducted competitor analysis and identified content opportunities to improve performance. Focused on optimizing TikTok content to enhance reach and engagement, contributing to overall brand growth.
           </p>
         </div>
 
@@ -48,12 +50,18 @@ const MenQuanExperience = () => {
           <i className="fa-solid fa-utensils"></i>
           <span>F&amp;B Marketing Communications</span>
         </div>
+
+        <div className="mq-brand-logos">
+          <img src={logo1} alt="Men Quan" className="mq-brand-logo" />
+          <img src={logo2} alt="Renge Ramen" className="mq-brand-logo" />
+          <img src={logo3} alt="H&L Concept" className="mq-brand-logo" />
+        </div>
       </div>
 
       {/* (2) Analytics Highlight Panel */}
       <div className="we-panel we-hero reveal-on-scroll">
         <div className="we-panel-label">Performance Analytics</div>
-        
+
         <div className="mq-metrics-highlight">
           <div className="mq-image-container">
             <img src={menquanImg} alt="Analytics Overview" className="mq-analytics-img" />
@@ -80,7 +88,7 @@ const MenQuanExperience = () => {
 
         <div className="mq-growth-card">
           <p className="mq-growth-text">
-            Scaled TikTok reach to <strong>162K users (+468.36%)</strong>  and <strong>185K views (+304.33%) </strong>  
+            Scaled TikTok reach to <strong>162K users (+468.36%)</strong>  and <strong>185K views (+304.33%) </strong>
             within <strong>12 weeks</strong> through content optimization.
           </p>
         </div>
@@ -94,13 +102,13 @@ const MenQuanExperience = () => {
         <div className="mq-video-gallery">
           {/* Facebook Reel - Using iframe embed if possible, or link card */}
           <div className="mq-video-wrapper">
-             <iframe 
-                src={`https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(facebookReel)}&show_text=false&t=0`} 
-                title="Facebook Reel"
-                allowFullScreen={true}
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                style={{ width: '100%', height: '100%' }}
-             ></iframe>
+            <iframe
+              src={`https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(facebookReel)}&show_text=false&t=0`}
+              title="Facebook Reel"
+              allowFullScreen={true}
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+              style={{ width: '100%', height: '100%' }}
+            ></iframe>
           </div>
 
           {/* TikTok Videos */}
@@ -121,18 +129,17 @@ const MenQuanExperience = () => {
       <div className="we-panel we-patterns reveal-on-scroll">
         <div className="we-panel-label">Brand Growth</div>
         <div className="we-metric-grid">
-            <div className="we-metric-card m1">
-                <div className="we-metric-value">162K</div>
-                <div className="we-metric-label">Reached Audience</div>
-            </div>
-            <div className="we-metric-card m2">
-                <div className="we-metric-value">185K</div>
-                <div className="we-metric-label">Video Views</div>
-            </div>
+          <div className="we-metric-card m1">
+            <div className="we-metric-value">162K</div>
+            <div className="we-metric-label">Reached Audience</div>
+          </div>
+          <div className="we-metric-card m2">
+            <div className="we-metric-value">185K</div>
+            <div className="we-metric-label">Video Views</div>
+          </div>
         </div>
         <p className="we-body" style={{ marginTop: '1.5rem' }}>
-            Consistently delivering high-impact content that resonates with the F&B community, 
-            driving significant organic growth for Men Quán and Renge Ramen.
+          Delivered consistent content aligned with audience preferences, contributing to organic growth and stronger brand presence for Men Quán and Renge Ramen.
         </p>
       </div>
     </>

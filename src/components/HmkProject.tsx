@@ -8,21 +8,22 @@ const HmkProject = () => {
     (n) => new URL(`../assets/images/Activities/hmk (${n}).png`, import.meta.url).href
   );
 
-  // Remaining images for the marquee
-  const marqueeNums = [2, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
-  const marqueeImgs = marqueeNums.map(
+  // Event concept images for the bento grid
+  const eventConceptNums = [15, 8, 10, 13, 2, 18, 11, 12, 6];
+  const eventConcepts = eventConceptNums.map(
     (n) => new URL(`../assets/images/Activities/hmk (${n}).png`, import.meta.url).href
   );
 
-  // Scroll-reveal
+  // top row: index 0 (hero) + 1,2,3,4 (2×2 small)
+  const topImages = eventConcepts.slice(0, 5);
+  // bottom row: index 5,6,7,8
+  const bottomImages = eventConcepts.slice(5, 9);
+
   const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
 
   const openLightbox = (src: string) => setLightboxSrc(src);
   const closeLightbox = () => setLightboxSrc(null);
 
-
-
-  // Close lightbox on Escape key
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') closeLightbox();
@@ -33,16 +34,16 @@ const HmkProject = () => {
 
   const objectives = [
     {
-      title: 'Increase Brand Awareness',
-      desc: 'and overall media coverage/reach.',
+      title: 'Strengthen brand awareness',
+      desc: 'and expand reach',
     },
     {
-      title: 'Achieve 20% Growth in Direct Sales',
-      desc: '(online & offline) by driving total store traffic.',
+      title: 'Drive both online and offline sales growth',
+      desc: '(+20%)',
     },
     {
-      title: 'Establish HMK as the Pioneering Vietnamese Eyewear Brand,',
-      desc: 'recognized for its modern spirit, technology, and superior customer experience.',
+      title: 'Position HMK',
+      desc: 'as a modern Vietnamese eyewear brand',
     },
   ];
 
@@ -57,22 +58,20 @@ const HmkProject = () => {
           <h3 className="hmk-title">#Nét Mọi Look</h3>
 
           <div className="hmk-meta">
-            <span>Date: <strong>10/2025 – Now</strong></span>
             <span>
-              Link:{' '}
+              View full campaign:{' '}
               <a
                 href="https://www.canva.com/design/DAG3cyRvxro/JZjnU_CbYc_COKfNsxtToQ/edit"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                View full project
+                Click here
               </a>
             </span>
           </div>
 
           <p className="hmk-desc">
-            Developed as part of our graduate IMC program, this Tết campaign for
-            HMK aimed to resolve critical brand issues and meet holiday objectives.
+            A Tết campaign developed for HMK, focused on addressing key brand challenges and driving seasonal growth.
           </p>
 
           <div className="hmk-objectives">
@@ -91,19 +90,10 @@ const HmkProject = () => {
           <div className="hmk-insight">
             <span className="hmk-insight-label">Insight</span>
             <p>
-              “While always meticulously preparing their appearance for every Tết occasion, many young people forget that their eyes - the clearest reflection of charisma and confidence - also need to be refreshed. <strong>They don't just want a clearer view of Tết</strong>; they also <strong>want themselves to become "sharper" </strong>(rõ nét) in every glance.”
+              "While always meticulously preparing their appearance for every Tết occasion, many young people forget that their eyes - the clearest reflection of charisma and confidence - also need to be refreshed. <strong>They don't just want a clearer view of Tết</strong>; they also <strong>want themselves to become "sharper" </strong>(rõ nét) in every glance."
             </p>
+            <p style={{ marginTop: '1rem' }}>→ This insight led to the idea of "Nét Mới Look" - redefining clarity not just as vision, but as confidence.</p>
           </div>
-
-          {/* Brand palette */}
-          <div className="hmk-palette">
-            <div className="hmk-swatch" style={{ background: '#8B1A1A' }} />
-            <div className="hmk-swatch" style={{ background: '#D4A853' }} />
-            <div className="hmk-swatch" style={{ background: '#F5F0E0' }} />
-            <div className="hmk-swatch" style={{ background: '#1A1A2E' }} />
-          </div>
-
-
         </div>
 
         {/* Right column — Video + Image grid */}
@@ -157,16 +147,42 @@ const HmkProject = () => {
         document.body
       )}
 
-      {/* ── Bottom: Infinite scrolling image marquee ──── */}
-      <div className="hmk-marquee">
-        <div className="hmk-marquee-track">
-          {[1, 2, 3].map((set) => (
-            <div key={set} className="hmk-marquee-set" aria-hidden={set > 1}>
-              {marqueeImgs.map((src, i) => (
-                <div key={`${set}-${i}`} className="hmk-marquee-card">
-                  <img src={src} alt={`HMK slide ${marqueeNums[i]}`} />
-                </div>
-              ))}
+      {/* ── Bottom: Event concept bento grid ──── */}
+      <div className="hmk-event-concept hmk-reveal">
+        <p className="hmk-event-title">
+          This is the <strong>&quot;Tết rõ, Tết đỏ&quot;</strong> event concept that I and my team developed for the <strong>&quot;Nét Mới Look&quot;</strong> campaign:
+        </p>
+
+        {/* Top bento: 1 large hero (left) + 2×2 small (right) */}
+        <div className="hmk-event-grid-top">
+          {topImages.map((src, i) => (
+            <div
+              key={i}
+              className="hmk-event-item"
+              onClick={() => openLightbox(src)}
+              title="Click to enlarge"
+            >
+              <img src={src} alt={`HMK Event Concept ${i + 1}`} />
+              <div className="hmk-grid-zoom-hint">
+                <i className="fa-solid fa-magnifying-glass-plus" />
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom row: 4 equal images */}
+        <div className="hmk-event-grid-bottom">
+          {bottomImages.map((src, i) => (
+            <div
+              key={i}
+              className="hmk-event-item"
+              onClick={() => openLightbox(src)}
+              title="Click to enlarge"
+            >
+              <img src={src} alt={`HMK Event Concept ${i + 6}`} />
+              <div className="hmk-grid-zoom-hint">
+                <i className="fa-solid fa-magnifying-glass-plus" />
+              </div>
             </div>
           ))}
         </div>

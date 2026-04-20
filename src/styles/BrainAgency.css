@@ -32,68 +32,6 @@
   text-transform: uppercase;
 }
 
-/* ── Panel 2 – Campaign Metrics ────────────────────────── */
-.ba-metrics-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.85rem;
-  margin-top: 0.75rem;
-}
-
-.ba-metric-card {
-  border-radius: 14px;
-  padding: 0.9rem 1rem;
-  background: white;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
-  border-left: 4px solid var(--ba-accent, #333);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.ba-metric-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-}
-
-.ba-metric-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.35rem;
-}
-
-.ba-metric-brand {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 800;
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  color: var(--ba-accent);
-  letter-spacing: 0.04em;
-}
-
-.ba-metric-type {
-  font-size: 0.62rem;
-  font-weight: 600;
-  color: #888;
-  background: #f4f4f4;
-  padding: 2px 6px;
-  border-radius: 10px;
-}
-
-.ba-metric-number {
-  font-family: var(--font-main);
-  font-weight: 800;
-  font-size: 2.4rem;
-  line-height: 1;
-  color: var(--color-text-main);
-  margin-bottom: 0.15rem;
-}
-
-.ba-metric-label {
-  font-size: 0.7rem;
-  color: #888;
-  font-family: 'Montserrat', sans-serif;
-}
 
 /* ── Panel 3 – Key Visuals ─────────────────────────────── */
 .ba-context-quote {
@@ -130,7 +68,8 @@
 
 .ba-kv-img {
   width: 100%;
-  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
   display: block;
   transition: transform 0.4s ease;
 }
@@ -154,68 +93,91 @@
   padding: 0.6rem 0.8rem 0.5rem;
 }
 
-/* ── Panel 4 – Photo Grid (3 portrait cards) ────────────── */
-.ba-photo-grid {
+/* ── Panel 4 – Interactive Carousel ────────────────────── */
+.ba-video-carousel {
   display: flex;
-  gap: 0.85rem;
-  justify-content: center;
-  margin-bottom: 1.25rem;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding: 1.5rem 1rem 3rem;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  cursor: grab;
+  -webkit-overflow-scrolling: touch;
 }
 
-.ba-photo-card {
-  flex: 1 1 140px;
-  max-width: 100%;
-  border-radius: 14px;
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.ba-video-carousel::-webkit-scrollbar {
+  display: none;
 }
 
-.ba-photo-card:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.14);
+.ba-video-carousel:active {
+  cursor: grabbing;
 }
 
-.ba-photo-img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 9 / 12;
-  object-fit: cover;
-  display: block;
+.ba-video-carousel.is-dragging {
+  scroll-snap-type: none;
+}
+
+.ba-video-card-interactive {
+  flex: 0 0 350px;
+  max-width: 80vw;
+  scroll-snap-align: center;
   transition: transform 0.4s ease;
+}
+
+.ba-video-card-interactive:hover {
+  transform: translateY(-10px);
+}
+
+.ba-video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  border-radius: 16px;
+  overflow: hidden;
+  background: black;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ba-video-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.ba-iframe-drag-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  cursor: grab;
+}
+
+.ba-iframe-drag-overlay:active {
+  cursor: grabbing;
+}
+
+.ba-iframe-drag-overlay.inactive {
   pointer-events: none;
 }
 
-.ba-photo-card:hover .ba-photo-img {
-  transform: scale(1.05);
+.ba-video-embed-container {
+  width: 100%;
+  height: 100%;
+  background: white;
+  overflow-y: auto;
+  scrollbar-width: none;
 }
 
-.ba-photo-caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
-  padding: 1.5rem 0.75rem 0.65rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
+.ba-video-embed-container::-webkit-scrollbar {
+  display: none;
 }
 
-.ba-photo-brand {
-  color: white;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 800;
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.ba-photo-stat {
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 0.64rem;
-  font-family: 'Montserrat', sans-serif;
+.ba-video-embed-container iframe {
+  width: 100% !important;
+  margin: 0 !important;
 }
 
 
@@ -313,18 +275,6 @@
   line-height: 1.5;
 }
 
-.ba-palette {
-  display: flex;
-  gap: 0.5rem;
-  margin-top: 0.25rem;
-}
-
-.ba-color {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
-}
 
 /* ── Scroll Reveal ──────────────────────────────────────── */
 .ba-reveal {
@@ -341,13 +291,7 @@
 
 /* ── Responsive ─────────────────────────────────────────── */
 @media (max-width: 768px) {
-  .ba-metrics-grid {
-    grid-template-columns: 1fr;
-  }
 
-  .ba-metric-number {
-    font-size: 2rem;
-  }
 
   .ba-kv-grid {
     gap: 1rem;
@@ -358,21 +302,8 @@
     flex: 1 1 100%;
   }
 
-  .ba-photo-grid {
-    flex-wrap: wrap;
-  }
-
-  .ba-photo-card {
-    flex: 1 1 140px;
-    max-width: none;
-  }
-
-  .ba-photo-img {
-    height: 200px;
-  }
-
-  .ba-photo-brand {
-    font-size: 0.65rem;
+  .ba-video-card-interactive {
+    flex: 0 0 280px;
   }
 
   .ba-marquee-tag {
@@ -382,11 +313,7 @@
 }
 
 @media (max-width: 480px) {
-  .ba-photo-card {
-    flex: 1 1 100%;
-  }
-
-  .ba-photo-img {
-    height: 240px;
+  .ba-video-card-interactive {
+    flex: 0 0 240px;
   }
 }

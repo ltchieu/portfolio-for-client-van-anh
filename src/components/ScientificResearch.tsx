@@ -31,9 +31,7 @@ const ScientificResearch = () => {
           </div>
 
           <p className="sr-desc">
-            Besides creative competitions, I'm also passionate about doing
-            <br />
-            scientific research at UEH university.
+            Alongside creative work, I am also engaged in academic research at UEH, focusing on human behavior, psychology, and decision-making.
           </p>
 
           {/* ★ Achievement badge */}
@@ -56,26 +54,6 @@ const ScientificResearch = () => {
                 <strong>The Role of Personality and Stress on Work-Life Balance Affecting Job Performance, and the Moderating Effect of Job Satisfaction:</strong> An Empirical Study on Gen Z in Economic Fields in Ho Chi Minh City.
               </li>
             </ul>
-          </div>
-
-          <div className="sr-current">
-            <div className="sr-current-accent" />
-            <div className="sr-current-body">
-              <h4 className="sr-current-title">
-                <i className="fa-solid fa-flask" /> Not stopping there...
-              </h4>
-              <p className="sr-current-tagline">Currently, I'm researching the following topics:</p>
-
-              <div className="sr-current-item">
-                <span className="sr-current-label">With my team:</span>
-                <p><strong>From Materialism to Life Satisfaction:</strong> The Mediating Role of Minimalism, Voluntary Simplification, and Consumer Behavior</p>
-              </div>
-
-              <div className="sr-current-item">
-                <span className="sr-current-label">Independently:</span>
-                <p><strong>Social Comparison on Social Media and Mental Health:</strong> Analyzing Upward/Downward Social Comparison, Stress, Self-Esteem, and Depression.</p>
-              </div>
-            </div>
           </div>
 
         </div>

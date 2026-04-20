@@ -1,14 +1,8 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
-import { 
-  HiOutlineMagnifyingGlass, 
-  HiOutlineChartBar, 
-  HiOutlinePencilSquare, 
-  HiOutlineUserGroup, 
-  HiOutlineCalendarDays, 
-  HiOutlineTrophy, 
-  HiOutlineLightBulb,
+import {
+  HiOutlineMagnifyingGlass,
   HiOutlineChatBubbleLeftRight,
   HiOutlineWrenchScrewdriver,
   HiOutlineBriefcase,
@@ -41,13 +35,9 @@ const Skills = () => {
   }, []);
 
   const marketingSkills = [
-    { title: 'Market Research', desc: 'Deep dive into consumer insights & competitive analysis.', icon: <HiOutlineMagnifyingGlass /> },
-    { title: 'Trend Tracking', desc: 'Staying ahead of viral shifts on TikTok, FB & Instagram.', icon: <HiOutlineChartBar /> },
-    { title: 'Creative Briefing', desc: 'Translating vision into actionable guides for creators.', icon: <HiOutlinePencilSquare /> },
-    { title: 'Influencer Coordination', desc: 'Selecting & managing key opinion leaders (KOLs).', icon: <HiOutlineUserGroup /> },
-    { title: 'Campaign Planning', desc: 'End-to-end execution of holistic marketing strategies.', icon: <HiOutlineCalendarDays /> },
-    { title: 'Performance Evaluation', desc: 'Data-driven analysis of reach, engagement & ROI.', icon: <HiOutlineTrophy /> },
-    { title: 'Content Strategy', desc: 'Crafting compelling narratives for diverse audiences.', icon: <HiOutlineLightBulb /> },
+    { title: 'Marketing Plan Execution', desc: 'Turning strategy into actionable plans across content, KOL, and campaign touchpoints.', icon: <HiOutlinePresentationChartLine /> },
+    { title: 'Campaign Execution', desc: 'Executing campaigns end-to-end, from idea development to on-ground coordination.', icon: <HiOutlineBriefcase /> },
+    { title: 'Consumer Insight Analysis', desc: 'Identifying audience behavior and translating insights into content and strategy direction.', icon: <HiOutlineMagnifyingGlass /> },
   ];
 
   const softSkills = [
@@ -92,7 +82,7 @@ const Skills = () => {
         {/* Marketing Skills */}
         <div className="skills-column marketing-column">
           <h3 className="category-label">Marketing Mastery</h3>
-          <motion.div 
+          <motion.div
             className="marketing-grid"
             variants={containerVariants}
             initial="hidden"
@@ -118,8 +108,8 @@ const Skills = () => {
             <h3 className="category-label">Technical Tools</h3>
             <div className="tools-row">
               {tools.map((tool, index) => (
-                <motion.div 
-                  className="tool-item" 
+                <motion.div
+                  className="tool-item"
                   key={index}
                   whileHover={{ scale: 1.1, y: -5 }}
                   title={tool.name}
@@ -146,7 +136,7 @@ const Skills = () => {
           {/* Certificates */}
           <div className="skills-box cert-box">
             <h3 className="category-label">Certificates</h3>
-            <div 
+            <div
               className="cert-card"
               onClick={() => openLightbox(toeicCert)}
               title="Click to enlarge"

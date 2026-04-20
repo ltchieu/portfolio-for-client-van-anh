@@ -64,9 +64,8 @@ const ToanPhatExperience = () => {
         <p className="we-subtitle">Sales &amp; Marketing Executive | 07/2025 – 12/2025</p>
         <div className="we-body">
           <p>
-            At a leading printing &amp; packaging manufacturer, I bridged client needs with production
-            realities — turning requirements into flawless execution plans while coordinating across
-            R&amp;D, technical, and production teams.
+            Worked at a printing & packaging manufacturer, bridging client requirements with production execution. Translated business needs into feasible packaging solutions while coordinating across R&D, technical, and production teams.
+            Gained hands-on understanding of how products move from concept to delivery, including feasibility, sampling, and quality control. This experience strengthened my ability to align client expectations with operational realities.
           </p>
         </div>
 
@@ -95,8 +94,7 @@ const ToanPhatExperience = () => {
       <div className="we-panel we-hero tp-reveal">
         <div className="we-panel-label">Global Clients</div>
         <p className="tp-context-quote">
-          Delivered end-to-end packaging solutions for multinational clients across{' '}
-          <strong>4 countries</strong>, ensuring international quality standards from design to delivery.
+          Delivered packaging solutions for international clients across multiple markets, ensuring consistency from design to production and delivery.
         </p>
 
         <div className="tp-client-grid">
@@ -146,8 +144,7 @@ const ToanPhatExperience = () => {
       <div className="we-panel we-typography tp-reveal" style={{ gridArea: 'typography' }}>
         <div className="we-panel-label">Company Showcase</div>
         <p className="we-body" style={{ marginBottom: '1.5rem' }}>
-          From ISO-certified manufacturing facilities to a diverse packaging portfolio — Toan Phat
-          delivers premium solutions for global brands.
+          Supported the development of company showcase materials, including website content, communication assets, and TVC production coordination, to communicate Toan Phat’s capabilities across both local and international markets:
         </p>
 
         <div className="tp-gallery-grid">
@@ -185,9 +182,6 @@ const ToanPhatExperience = () => {
               allowFullScreen
             ></iframe>
           </div>
-          <p className="tp-video-caption">
-            A visual look at Toan Phat&apos;s company profile, production capability, and brand presentation.
-          </p>
         </div>
 
         {/* Marquee */}
@@ -222,14 +216,6 @@ const ToanPhatExperience = () => {
               {i < pipeline.length - 1 && <div className="tp-pipe-connector"></div>}
             </div>
           ))}
-        </div>
-
-        {/* Brand palette */}
-        <div className="tp-brand-palette">
-          <div className="tp-b-color" style={{ background: '#c89b3c' }}></div>
-          <div className="tp-b-color" style={{ background: '#3d2b1f' }}></div>
-          <div className="tp-b-color" style={{ background: '#f5f0e8', border: '1px solid #ccc' }}></div>
-          <div className="tp-b-color" style={{ background: '#1a3c5e' }}></div>
         </div>
       </div>
     </>

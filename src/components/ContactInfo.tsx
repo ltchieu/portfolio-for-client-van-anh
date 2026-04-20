@@ -15,7 +15,8 @@ const ContactInfo = () => {
       >
         <h2 className="contact-title">Let's Work Together</h2>
         <p className="contact-desc">
-          Have a project in mind or just want to say hi? Feel free to reach out. I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.
+          Open to opportunities in branding, planning, and creative strategy.
+          I’m particularly interested in projects where insights can be translated into clear and effective execution.
         </p>
 
         <div className="contact-links">

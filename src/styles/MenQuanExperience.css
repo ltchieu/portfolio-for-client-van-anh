@@ -3,8 +3,8 @@
     background-color: var(--color-bg-main);
     transition: var(--transition-smooth);
     background-image: radial-gradient(circle at top right,
-    rgba(200, 155, 60, 0.08),
-    transparent 60%)
+            rgba(200, 155, 60, 0.08),
+            transparent 60%)
 }
 
 .mq-intro-copy {
@@ -63,6 +63,25 @@
     text-transform: uppercase;
 }
 
+.mq-brand-logos {
+    display: flex;
+    align-items: center;
+    gap: 2.8rem;
+    margin-top: 1.8rem;
+    flex-wrap: wrap;
+}
+
+.mq-brand-logo {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.mq-brand-logo:hover {
+    transform: translateY(-4px) scale(1.05);
+}
+
 .mq-metrics-highlight {
     margin-top: 2rem;
     display: flex;
@@ -86,7 +105,7 @@
     overflow: visible;
     border: 1px solid rgba(20, 61, 96, 0.2);
     background: #151515;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .mq-analytics-img {
@@ -171,19 +190,18 @@
     width: 38%;
     height: 300%;
     transform: rotate(18deg);
-    background: linear-gradient(
-        90deg,
-        transparent 0%,
-        rgba(255, 255, 255, 0) 20%,
-        rgba(255, 255, 255, 0.35) 50%,
-        rgba(255, 255, 255, 0) 80%,
-        transparent 100%
-    );
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0) 20%,
+            rgba(255, 255, 255, 0.35) 50%,
+            rgba(255, 255, 255, 0) 80%,
+            transparent 100%);
     animation: mqCalloutShine 3.8s ease-in-out infinite;
     opacity: 0.8;
 }
 
 @keyframes mqCalloutFloat {
+
     0%,
     100% {
         transform: translate(-50%, -50%) translateY(0);
@@ -197,6 +215,7 @@
 }
 
 @keyframes mqPulseDot {
+
     0%,
     100% {
         box-shadow: 0 0 0 4px color-mix(in srgb, var(--callout-accent) 20%, transparent);
@@ -208,6 +227,7 @@
 }
 
 @keyframes mqCalloutShine {
+
     0%,
     100% {
         transform: translateX(-120%) rotate(18deg);
@@ -232,13 +252,13 @@
 .mq-h-video-views {
     --callout-accent: var(--color-highlight-2);
     left: 79%;
-    top: 31%;
+    top: 36%;
 }
 
 .mq-h-reached-audience {
     --callout-accent: var(--color-highlight-1);
     left: 79%;
-    top: 40%;
+    top: 45%;
 }
 
 /* Peaks emphasis (second image) */
@@ -253,8 +273,8 @@
     height: 12%;
     border-radius: 18px;
     background: linear-gradient(180deg,
-        color-mix(in srgb, var(--color-highlight-2) 14%, transparent),
-        color-mix(in srgb, var(--color-highlight-1) 10%, transparent));
+            color-mix(in srgb, var(--color-highlight-2) 14%, transparent),
+            color-mix(in srgb, var(--color-highlight-1) 10%, transparent));
     border: 1px solid color-mix(in srgb, var(--color-highlight-2) 24%, transparent);
     box-shadow:
         0 0 0 4px color-mix(in srgb, var(--color-highlight-2) 8%, transparent),
@@ -299,7 +319,7 @@
     padding: 1.5rem;
     border-radius: 16px;
     border-left: 6px solid var(--color-highlight-2);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
     margin-top: 1.5rem;
 }
 
@@ -323,7 +343,7 @@
     border-radius: 16px;
     overflow: hidden;
     position: relative;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 .mq-video-wrapper iframe {
@@ -360,7 +380,7 @@
     .mq-video-gallery {
         grid-template-columns: 1fr;
     }
-    
+
     .mq-growth-text {
         font-size: 1.05rem;
     }

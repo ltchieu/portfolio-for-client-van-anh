@@ -299,15 +299,6 @@
   margin-bottom: 0.4rem;
 }
 
-.tp-gallery-caption {
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 0.7rem;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  margin: 0;
-  line-height: 1.4;
-}
-
 .tp-video-showcase {
   margin-bottom: 1.5rem;
   padding: 1rem;
@@ -505,7 +496,7 @@
   .tp-gallery-item--tall .tp-gallery-img {
     min-height: 280px;
   }
-  
+
   .tp-gallery-img {
     height: auto;
     aspect-ratio: 4 / 3;

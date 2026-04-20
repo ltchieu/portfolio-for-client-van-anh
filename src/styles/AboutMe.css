@@ -109,6 +109,69 @@
   transform: translateY(-5px);
 }
 
+/* Tab styles */
+.about-block--profile {
+  position: relative;
+  min-height: 250px;
+}
+
+.about-tabs {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+  border-bottom: 1px solid rgba(20, 61, 96, 0.1);
+}
+
+.about-tab {
+  background: none;
+  border: none;
+  padding: 0.5rem 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-main);
+  opacity: 0.4;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.about-tab:hover {
+  opacity: 0.7;
+}
+
+.about-tab.active {
+  opacity: 1;
+  color: var(--color-highlight-2);
+}
+
+.active-tab-indicator {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-highlight-2);
+  z-index: 2;
+}
+
+.tab-content-wrapper {
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+.tab-content-accent {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 4px;
+  border-radius: 4px;
+  z-index: 1;
+}
+
 .info-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -183,15 +246,15 @@
   align-items: center;
   width: 100%;
   position: relative;
-  height: 250px;
+  height: 400px;
 }
 
 .polaroid {
-  width: 140px;
-  height: 160px;
+  width: 240px;
+  height: 260px;
   object-fit: cover;
-  border: 8px solid white;
-  border-bottom: 30px solid white;
+  border: 10px solid white;
+  border-bottom: 45px solid white;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   position: absolute;

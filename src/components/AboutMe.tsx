@@ -1,4 +1,5 @@
-import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import { useState } from 'react';
+import { motion, useMotionValue, useSpring, useTransform, AnimatePresence } from 'framer-motion';
 import '../styles/AboutMe.css';
 
 // Import local images
@@ -9,7 +10,10 @@ import img4 from '../assets/images/aboutme4.png';
 import img5 from '../assets/images/aboutme5.jpg';
 import img6 from '../assets/images/aboutme8.jpg';
 
+type TabType = 'story' | 'vision';
+
 const AboutMe = () => {
+  const [activeTab, setActiveTab] = useState<TabType>('vision');
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
@@ -75,11 +79,56 @@ const AboutMe = () => {
         transition={{ duration: 0.8, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        <div className="about-block">
-          <h2 className="block-title">ABOUT ME</h2>
-          <p className="block-desc">
-            Marketing Executive with experience in supporting <strong>brand strategy</strong> and <strong>executing marketing plans across digital and production environments</strong>. Demonstrates the ability to <strong>coordinate cross-functional teams</strong>, <strong>monitor campaign performance</strong>, and <strong>contribute to growth initiatives</strong>. Interested in FMCG with exposure to packaging and operations, and <strong>strong planning</strong> and <strong>problem-solving skills</strong>.
-          </p>
+        <div className="about-block about-block--profile">
+          <div className="about-tabs">
+            {['vision', 'story'].map((tab) => (
+              <button
+                key={tab}
+                className={`about-tab ${activeTab === tab ? 'active' : ''}`}
+                onClick={() => setActiveTab(tab as TabType)}
+              >
+                {tab === 'vision' ? 'My Vision' : 'My Story'}
+                {activeTab === tab && (
+                  <motion.div
+                    layoutId="activeTab"
+                    className="active-tab-indicator"
+                    transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                  />
+                )}
+              </button>
+            ))}
+          </div>
+
+          <div className="tab-content-wrapper">
+            {/* Visual Highlight Accent */}
+            <motion.div
+              className="tab-content-accent"
+              animate={{
+                backgroundColor: activeTab === 'vision' ? 'var(--color-highlight-2)' : '#143d60',
+                height: activeTab === 'vision' ? '40px' : '60px'
+              }}
+            />
+
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeTab}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+              >
+                <h2 className="block-title">
+                  {activeTab === 'vision' ? 'THE VISION' : 'THE JOURNEY'}
+                </h2>
+                <p className="block-desc">
+                  {activeTab === 'story'
+                    ? "My path to marketing has not been linear. I have worked on both the agency and client sides, followed by a period in sales, before returning to marketing in my current role. These experiences gave me a clearer understanding of how ideas are developed, how businesses operate, and how customers make decisions. Through this, I realized I am particularly interested in understanding people and uncovering insights behind their behavior. I tend to start with observation and analysis, then connect fragmented inputs into clearer directions."
+                    : "I aim to grow as a planner within the branding field, focusing on insight development, strategy, and concept creation. I am interested in working at the intersection of consumer understanding and creative direction, where observations and data are translated into clear brand directions. In the long term, I want to build brands from a foundational level, where insight, strategy, and creativity are integrated."
+                  }
+                </p>
+              </motion.div>
+            </AnimatePresence>
+          </div>
         </div>
 
         <div className="info-grid">
@@ -108,14 +157,14 @@ const AboutMe = () => {
               <h2 className="block-title">LANGUAGE</h2>
               <ul className="edu-list" style={{ flexDirection: 'row', gap: '3rem' }}>
                 <li>
-                  <span className="edu-icon">✦</span>
+                  <span className="edu-icon">✿</span>
                   <div className="edu-info">
                     <strong>Vietnamese</strong>
                     <span className="edu-meta">Native</span>
                   </div>
                 </li>
                 <li>
-                  <span className="edu-icon">✦</span>
+                  <span className="edu-icon">✿</span>
                   <div className="edu-info">
                     <strong>English</strong>
                     <span className="edu-meta">Upper-Intermediate</span>
@@ -130,28 +179,28 @@ const AboutMe = () => {
               <h2 className="block-title">EXPERIENCE</h2>
               <ul className="edu-list">
                 <li>
-                  <span className="edu-icon">✦</span>
+                  <span className="edu-icon">✿</span>
                   <div className="edu-info">
                     <strong>Marketing Executive</strong>
                     <span className="edu-meta">H&L Concept <span>—</span> (01/2026 - Present)</span>
                   </div>
                 </li>
                 <li>
-                  <span className="edu-icon">✦</span>
+                  <span className="edu-icon">✿</span>
                   <div className="edu-info">
                     <strong>Sales & Marketing Exec</strong>
                     <span className="edu-meta">Toan Phat<span>—</span> (07/2025 - 12/2025)</span>
                   </div>
                 </li>
                 <li>
-                  <span className="edu-icon">✦</span>
+                  <span className="edu-icon">✿</span>
                   <div className="edu-info">
                     <strong>Social Media Marketing</strong>
                     <span className="edu-meta">Highlands Coffee <span>—</span> (08/2024 - 04/2025)</span>
                   </div>
                 </li>
                 <li>
-                  <span className="edu-icon">✦</span>
+                  <span className="edu-icon">✿</span>
                   <div className="edu-info">
                     <strong>Account Executive</strong>
                     <span className="edu-meta">Brainad Agency <span>—</span> (07/2024 - 01/2025)</span>
@@ -163,11 +212,11 @@ const AboutMe = () => {
         </div>
 
         <div className="photo-collage">
-          <motion.img src={img5} className="polaroid" initial={{ rotate: -8, x: -190, y: 0 }} whileHover={{ scale: 1.2, zIndex: 10, rotate: 0, y: -20 }} />
-          <motion.img src={img2} className="polaroid" initial={{ rotate: 5, x: -90, y: 10 }} whileHover={{ scale: 1.2, zIndex: 10, rotate: 0, y: -20 }} />
-          <motion.img src={img3} className="polaroid" initial={{ rotate: -5, x: 0, y: 0 }} whileHover={{ scale: 1.2, zIndex: 10, rotate: 0, y: -20 }} />
-          <motion.img src={img6} className="polaroid" initial={{ rotate: -15, x: 180, y: 0 }} whileHover={{ scale: 1.2, zIndex: 10, rotate: 0, y: -20 }} />
-          <motion.img src={img4} className="polaroid" initial={{ rotate: 15, x: 90, y: 10 }} whileHover={{ scale: 1.2, zIndex: 10, rotate: 0, y: -20 }} />
+          <motion.img src={img5} className="polaroid" initial={{ rotate: -10, x: -280, y: 0 }} whileHover={{ scale: 1.1, zIndex: 10, rotate: 0, y: -20 }} />
+          <motion.img src={img2} className="polaroid" initial={{ rotate: 6, x: -140, y: 15 }} whileHover={{ scale: 1.1, zIndex: 10, rotate: 0, y: -20 }} />
+          <motion.img src={img3} className="polaroid" initial={{ rotate: -4, x: 0, y: 0 }} whileHover={{ scale: 1.1, zIndex: 10, rotate: 0, y: -20 }} />
+          <motion.img src={img4} className="polaroid" initial={{ rotate: 12, x: 140, y: 15 }} whileHover={{ scale: 1.1, zIndex: 10, rotate: 0, y: -20 }} />
+          <motion.img src={img6} className="polaroid" initial={{ rotate: -12, x: 280, y: 0 }} whileHover={{ scale: 1.1, zIndex: 10, rotate: 0, y: -20 }} />
         </div>
       </motion.div>
     </section>

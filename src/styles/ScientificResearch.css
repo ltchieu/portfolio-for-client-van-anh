@@ -229,20 +229,21 @@
 
 /* ── Right column ─────────────────────────────────────── */
 .sr-right-col {
+  position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  padding: 1.5rem;
+  padding: 2.5rem 2rem;
+  min-height: 500px;
 }
 
-/* Image grid for the two certificates */
+/* Creative layered stack for the two certificates */
 .sr-grid {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  width: 100%;
-  max-width: 420px;
-  /* Keep them from getting too huge */
 }
 
 .sr-grid-item {
@@ -250,20 +251,42 @@
   overflow: hidden;
   position: relative;
   cursor: pointer;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  border: 1px solid color-mix(in srgb, var(--sr-blue) 20%, transparent);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+  border: 1px solid color-mix(in srgb, var(--sr-blue) 15%, transparent);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  background: #fff;
+}
+
+/* First image: shifted slightly left/up */
+.sr-grid-item:nth-child(1) {
+  width: 88%;
+  align-self: flex-start;
+  z-index: 1;
+}
+
+/* Second image: overlapping, shifted right/down */
+.sr-grid-item:nth-child(2) {
+  width: 88%;
+  align-self: flex-end;
+  margin-top: -35%;
+  z-index: 2;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.22);
+}
+
+.sr-grid-item:hover {
+  z-index: 10;
+  transform: translateY(-8px) scale(1.02);
 }
 
 .sr-grid-item img {
   width: 100%;
   height: auto;
   display: block;
-  transition: transform 0.45s ease, filter 0.3s ease;
+  transition: filter 0.3s ease;
 }
 
 .sr-grid-item:hover img {
-  transform: scale(1.04);
-  filter: brightness(1.06);
+  filter: brightness(1.04);
 }
 
 .sr-grid-zoom-hint {
@@ -272,19 +295,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0);
+  background: rgba(14, 77, 179, 0);
   color: white;
   font-size: 2rem;
   opacity: 0;
-  transition: opacity 0.25s ease, background 0.25s ease;
+  transition: opacity 0.3s ease, background 0.3s ease;
   pointer-events: none;
 }
 
 .sr-grid-item:hover .sr-grid-zoom-hint {
   opacity: 1;
   background: rgba(14, 77, 179, 0.4);
-  /* Blue-ish tint */
 }
+
 
 
 /* ── Lightbox ─────────────────────────────────────────── */
