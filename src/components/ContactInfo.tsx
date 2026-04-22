@@ -19,24 +19,22 @@ const ContactInfo = () => {
           I’m particularly interested in projects where insights can be translated into clear and effective execution.
         </p>
 
-        <div className="contact-links">
-          <a href="mailto:vananhvo2309@gmail.com" className="social-icon" aria-label="Email">
-            <FiMail />
+        <div className="contact-info-cards">
+          <a href="mailto:vananhvo2309@gmail.com" className="contact-card" aria-label="Email">
+            <div className="contact-card-icon"><FiMail /></div>
+            <div className="contact-card-text">
+              <span>Email Me</span>
+              <strong>vananhvo2309@gmail.com</strong>
+            </div>
           </a>
-          <a href="tel:+84395673098" className="social-icon" aria-label="PhoneNumber">
-            <FaPhone />
+          <a href="tel:+84395673098" className="contact-card" aria-label="PhoneNumber">
+            <div className="contact-card-icon"><FaPhone /></div>
+            <div className="contact-card-text">
+              <span>Call Me</span>
+              <strong>+84 39 567 3098</strong>
+            </div>
           </a>
-          {/* <a href="#" className="social-icon" aria-label="LinkedIn">
-            <FiLinkedin />
-          </a>
-          <a href="#" className="social-icon" aria-label="Instagram">
-            <FiInstagram />
-          </a> */}
         </div>
-
-        <button className="btn btn-primary" onClick={() => window.location.href = 'mailto:vananhvo2309@gmail.com'}>
-          SAY HELLO
-        </button>
 
         <div className="footer-text">
           © {new Date().getFullYear()} Vo Le Van Anh. All rights reserved.

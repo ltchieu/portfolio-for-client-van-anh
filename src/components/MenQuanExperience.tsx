@@ -1,7 +1,22 @@
 /* MenQuanExperience.tsx */
+import { useEffect } from 'react';
 import '../styles/MenQuanExperience.css';
 
 const MenQuanExperience = () => {
+  useEffect(() => {
+    // Load Facebook SDK
+    if (!(window as any).FB) {
+      const script = document.createElement('script');
+      script.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2";
+      script.async = true;
+      script.defer = true;
+      script.crossOrigin = "anonymous";
+      document.body.appendChild(script);
+    } else {
+      (window as any).FB.XFBML.parse();
+    }
+  }, []);
+
   const menquanImg = new URL('../assets/images/WorkExperience/menquan.png', import.meta.url).href;
   const menquan1Img = new URL('../assets/images/WorkExperience/menquan1.png', import.meta.url).href;
   const logo1 = new URL('../assets/images/WorkExperience/menquan2.png', import.meta.url).href;
@@ -18,14 +33,14 @@ const MenQuanExperience = () => {
     { id: '7616340201970945300', label: '@menquan691' }
   ];
 
-  const facebookReel = "https://www.facebook.com/reel/1416497186550250";
-
   return (
     <>
       {/* (1) Intro Panel */}
       <div className="we-panel we-intro mq-panel-premium reveal-on-scroll">
         <h3 className="we-title" style={{ marginTop: '0.5rem' }}>H&L CONCEPT</h3>
-        <p className="we-subtitle">01/2026 – Present</p>
+        <p className="we-subtitle">
+          Marketing Executive | 01/2026 - Present
+        </p>
 
         <div className="we-body mq-intro-copy">
           <p>
@@ -100,16 +115,19 @@ const MenQuanExperience = () => {
         <span className="mq-section-label">Some of the key videos I developed:</span>
 
         <div className="mq-video-gallery">
-          {/* Facebook Reel - Using iframe embed if possible, or link card */}
+          {/* Facebook Reel - Using iframe embed if possible, or link card
           <div className="mq-video-wrapper">
-            <iframe
-              src={`https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(facebookReel)}&show_text=false&t=0`}
-              title="Facebook Reel"
-              allowFullScreen={true}
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-              style={{ width: '100%', height: '100%' }}
-            ></iframe>
-          </div>
+            <div id="fb-root"></div>
+            <div className="fb-video" data-href="https://www.facebook.com/MENquan691/videos/1416497186550250/" data-width="267" data-show-text="false">
+              <div className="fb-xfbml-parse-ignore">
+                <blockquote cite="https://www.facebook.com/MENquan691/videos/1416497186550250/">
+                  <a href="https://www.facebook.com/MENquan691/videos/1416497186550250/">Video by Men Quán</a>
+                  <p>Men Quán.</p>
+                  Posted by <a href="https://www.facebook.com/MENquan691/">Men Quán</a>
+                </blockquote>
+              </div>
+            </div>
+          </div> */}
 
           {/* TikTok Videos */}
           {tiktokVideos.map((video) => (

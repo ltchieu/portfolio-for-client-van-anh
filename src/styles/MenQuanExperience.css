@@ -332,7 +332,8 @@
 
 .mq-video-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 340px));
+    justify-content: center;
     gap: 1.5rem;
     margin-top: 1.5rem;
 }
@@ -378,7 +379,7 @@
     }
 
     .mq-video-gallery {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 340px));
     }
 
     .mq-growth-text {

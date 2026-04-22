@@ -175,6 +175,7 @@ const TvcProject = () => {
         </div>,
         document.body
       )}
+      <div style={{ borderBottom: '1px solid color-mix(in srgb, var(--color-text-main) 35%, transparent)', marginTop: '2rem', width: '100%' }}></div>
     </div>
   );
 };

@@ -26,31 +26,74 @@
   max-width: 600px;
 }
 
-.contact-links {
+.contact-info-cards {
   display: flex;
-  gap: 2rem;
-  margin-bottom: 2rem;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.social-icon {
-  width: 60px;
-  height: 60px;
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
   background-color: var(--color-bg-main);
+  padding: 1rem 1.8rem 1rem 1rem;
+  border-radius: 100px;
+  text-decoration: none;
+  color: var(--color-text-main);
+  box-shadow: 0 8px 24px rgba(20, 61, 96, 0.06);
+  transition: var(--transition-smooth);
+  border: 1px solid rgba(20, 61, 96, 0.05);
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(217, 113, 151, 0.15);
+  border-color: rgba(217, 113, 151, 0.3);
+}
+
+.contact-card-icon {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(217, 113, 151, 0.1);
+  color: var(--color-highlight-2);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.8rem;
-  color: var(--color-text-main);
+  font-size: 1.4rem;
   transition: var(--transition-smooth);
-  box-shadow: 0 5px 15px rgba(20, 61, 96, 0.05);
 }
 
-.social-icon:hover {
+.contact-card:hover .contact-card-icon {
   background-color: var(--color-highlight-2);
   color: var(--color-bg-main);
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(217, 113, 151, 0.3);
+  transform: scale(1.05);
+}
+
+.contact-card-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.contact-card-text span {
+  font-size: 0.8rem;
+  opacity: 0.6;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.2rem;
+  font-weight: 600;
+}
+
+.contact-card-text strong {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  letter-spacing: 0.3px;
 }
 
 .footer-text {
@@ -74,16 +117,17 @@
     margin-bottom: 2rem;
   }
 
-  .contact-links {
-    gap: 1.2rem;
-    flex-wrap: wrap;
-    justify-content: center;
+  .contact-info-cards {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
   }
 
-  .social-icon {
-    width: 50px;
-    height: 50px;
-    font-size: 1.5rem;
+  .contact-card {
+    width: 100%;
+    max-width: 340px;
+    padding: 0.8rem 1.5rem 0.8rem 0.8rem;
   }
 }
 

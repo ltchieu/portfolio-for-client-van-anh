@@ -61,7 +61,7 @@ const HmkProject = () => {
             <span>
               View full campaign:{' '}
               <a
-                href="https://www.canva.com/design/DAG3cyRvxro/JZjnU_CbYc_COKfNsxtToQ/edit"
+                href="https://drive.google.com/file/d/1YUJ_MPdd36wYlT5UMvhIjMwczXKzvVAP/view"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -187,6 +187,8 @@ const HmkProject = () => {
           ))}
         </div>
       </div>
+
+      <div style={{ borderBottom: '1px solid color-mix(in srgb, var(--color-text-main) 35%, transparent)', marginTop: '2rem', width: '100%' }}></div>
     </div>
   );
 };
